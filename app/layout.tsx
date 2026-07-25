@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "@/components/ui/ThemeProvider";
-import TopBar from "@/components/layout/TopBar";
+import ThemeProvider from "@/components/ui/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -31,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${robotoMono.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
@@ -39,13 +38,8 @@ export default function RootLayout({
       </head>
       <body className="flex flex-col w-full h-full min-h-full items-center">
         <ThemeProvider>
-          <div className="grid grid-cols-[0_1fr_0] lg:grid-cols-[200px_1fr_200px] 2xl:grid-cols-[350px_1fr_350px] w-full h-full">
-            <div/>
-            <div className="flex flex-col w-full h-full">
-              <TopBar/>
-              {children}
-            </div>
-            <div/>
+          <div className="flex flex-col w-full h-full">
+            {children}
           </div>
         </ThemeProvider>
       </body>
