@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "@/components/ui/theme-provider";
+import ThemeProvider from "@/components/layout/theme-provider";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
