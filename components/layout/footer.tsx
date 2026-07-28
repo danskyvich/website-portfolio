@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="flex flex-col border-r border-(--color-line)/50 mr-5 px-2 py-10 gap-6">
           <p className="text-[0.9rem] font-semibold">Danilo Pelin Jr.</p>
           <div className="flex w-full h-fit items-center gap-3 text-[0.9rem] text-(--color-text-primary)">
-            <Pin size={15}/>
+            <Pin size={15} />
             <p className="font-light">Quezon City, Philippines</p>
           </div>
           <p className="flex text-[0.9rem] font-mono ">(+63)928-378-2089</p>
@@ -54,12 +54,15 @@ export default function Footer() {
           <p className="row-start-1 col-span-2 font-bold">Socials</p>
           {socials.map((item, key) => (
             <div className="flex w-full h-fit">
-                <div className="flex w-[15%]">
-                    {item.icon}
-                </div>
-                <a href={item.link} className="hover:underline text-[0.9rem] font-light" target="_blank" rel="noreferrer noopener">
-                    <p>{item.name}</p>
-                </a>
+              <div className="flex w-[15%]">{item.icon}</div>
+              <a
+                href={item.link}
+                className="hover:underline text-[0.9rem] font-light"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <p>{item.name}</p>
+              </a>
             </div>
           ))}
         </div>
