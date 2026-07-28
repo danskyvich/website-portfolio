@@ -1,8 +1,12 @@
 import { FacebookIcon, GithubIcon, LinkedinIcon } from "@/lib/icons";
-import { Pin } from "lucide-react";
-import React from "react";
+import { Mail, Phone, Pin } from "lucide-react";
 
 export default function Footer() {
+  const personal = [
+    { name: "Quezon City, Philippines", icon: <Pin size={15} /> },
+    { name: "(+63)928-378-2089", icon: <Phone size={15} /> },
+    { name: "danilopelinjr@gmail.com", icon: <Mail size={15} /> },
+  ];
   const links = [
     { name: "My works", link: "#my-works" },
     { name: "About me", link: "#about-me" },
@@ -32,11 +36,15 @@ export default function Footer() {
       <div className="grid grid-cols-[34%_1fr_1fr] grid-rows-1 w-full h-full">
         <div className="flex flex-col border-r border-(--color-line)/50 mr-5 px-2 py-10 gap-6">
           <p className="text-[0.9rem] font-semibold">Danilo Pelin Jr.</p>
-          <div className="flex w-full h-fit items-center gap-3 text-[0.9rem] text-(--color-text-primary)">
-            <Pin size={15} />
-            <p className="font-light">Quezon City, Philippines</p>
-          </div>
-          <p className="flex text-[0.9rem] font-mono ">(+63)928-378-2089</p>
+          {personal.map((item, key) => (
+            <div
+              className="flex w-full h-fit items-center gap-3 text-[0.9rem] text-(--color-text-primary)"
+              key={key}
+            >
+              {item.icon}
+              <p className="flex text-[0.9rem]">{item.name}</p>
+            </div>
+          ))}
         </div>
         <div className="flex flex-col gap-6 border-x border-(--color-line)/50 px-2 pt-10 text-[0.9rem]">
           <p className="font-bold">This page</p>
@@ -53,8 +61,8 @@ export default function Footer() {
         <div className="flex flex-col gap-6 text-[0.9rem] border-l border-(--color-line)/50 ml-5 px-2 pt-10">
           <p className="row-start-1 col-span-2 font-bold">Socials</p>
           {socials.map((item, key) => (
-            <div className="flex w-full h-fit">
-              <div className="flex w-[15%]">{item.icon}</div>
+            <div className="flex w-full h-fit" key={key}>
+              <div className="flex w-[10%]">{item.icon}</div>
               <a
                 href={item.link}
                 className="hover:underline text-[0.9rem] font-light"
