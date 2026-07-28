@@ -247,6 +247,7 @@ export default function MainPortfolioPage() {
             </div>
 
             {/* footer */}
+            <Footer/>
           </div>
         </div>
 
