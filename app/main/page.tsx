@@ -1,17 +1,18 @@
 'use client'
 
+import Browser from "@/components/layout/browser";
 import SectionHeader from "@/components/layout/section-header";
 import TechStack from "@/components/layout/tech-stack";
-import TopBar from "@/components/layout/top-bar";
+import TopBar from "@/components/layout/header";
 import Button from "@/components/ui/button";
 import DoubleLineBorder from "@/components/ui/double-line-border";
-import LoopingText from "@/components/ui/looping-text";
+import PortfolioHeader from "@/components/ui/portfolio-header";
 import TechStackGrid from "@/components/ui/tech-stack-grid";
 import { CSSIcon, GithubIcon, HTMLWeb3Icon, NextJSIcon, SupabaseIcon, TailwindCSSIcon, TypescriptIcon, VercelIcon, VSCodeIcon } from "@/lib/icons";
 import { ProjectInformation } from "@/lib/types";
 import { ArrowUpRight, Section, X } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import Footer from "@/components/layout/footer";
 
 const firstProjectIcons: ProjectInformation[] = [
   { icon: <TypescriptIcon />, link: "https://www.typescriptlang.org" },
@@ -41,35 +42,7 @@ export default function MainPortfolioPage() {
           {/* Content goes here */}
           <div className="flex flex-col w-full h-full border-x border-(--color-line)">
             {/* header */}
-            <div className="flex relative flex-col w-full h-150 justify-end">
-              <div className="flex w-full h-fit items-end">
-                <p className="font-mono text-2xl/10 font-extralight w-[70%] ml-5">
-                  I'm
-                  <br />
-                  <span className="text-6xl font-semibold bg-clip-text text-transparent bg-linear-to-r from-(--color-brand-blue) to-(--color-brand-purple)">
-                    Danilo Pelin
-                  </span>
-                  <span className="text-xl text-(--color-text-secondary)">
-                    (aka nilo)
-                    <br />
-                  </span>
-                  A{" "}
-                  <span className="text-(--color-brand-blue) font-semibold">
-                    front-end developer
-                  </span>{" "}
-                  from the Philippines. I like to build websites for fun.
-                  Currently exploring the field of backend development,
-                  relational database management, and new front-end frameworks.
-                </p>
-                <p className="absolute -left-12 bottom-5 rotate-270 font-mono text-(--color-brand-purple)">
-                  header
-                </p>
-              </div>
-              {/* border */}
-              <DoubleLineBorder className="-bottom-10" />
-              <LoopingText className="absolute -bottom-17 text-(--color-brand-blue-accent)" />
-              <DoubleLineBorder className="-bottom-25" />
-            </div>
+            <PortfolioHeader />
 
             {/* Separation-1 */}
             <div className="flex relative w-full h-80 justify-end">
@@ -164,57 +137,28 @@ export default function MainPortfolioPage() {
               />
 
               <div className="grid grid-rows-1 h-fit mt-15 border-t border-(--color-line)">
-                <div className="grid grid-cols-[1fr_30px_400px] border-b border-(--color-line) w-full h-fit">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_30px_400px] border-b border-(--color-line) w-full h-fit">
                   {/* Browser */}
-                  <div className="flex flex-col w-full h-125">
-                    {/* tab */}
-                    <div className="flex w-full h-[7%] rounded-t-4xl bg-(--color-brand-blue-dark) px-20 gap-5 py-2">
-                      <div className="flex flex-1 w-full h-full items-center justify-center gap-3">
-                        <div className="rounded-[50%] w-3 h-3 bg-red-400" />
-                        <div className="rounded-[50%] w-3 h-3 bg-amber-200" />
-                        <div className="rounded-[50%] w-3 h-3 bg-green-300" />
-                      </div>
-
-                      <div className="flex flex-auto px-3 w-full h-full rounded-2xl bg-(--color-brand-blue-soft) items-center">
-                        <p className="text-white text-[0.7rem]">
-                          http://localhost:3000
-                        </p>
-                      </div>
-
-                      <div className="flex w-auto h-full items-center justify-end">
-                        <X size={20} />
-                      </div>
-                    </div>
-
-                    <div className="flex w-full h-[93%] rounded-b-4xl bg-(--color-brand-blue-super-dark)"></div>
-                  </div>
+                  <Browser />
 
                   <div className="border-x border-(--color-line)" />
 
-                  <div className="flex flex-col w-full min-h-full">
-                    <p className="h-fit w-full border-b border-(--color-line)/30 text-(--color-text-secondary) font-[0.9rem] font-sans text-end px-3">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam ullamcorper facilisis erat, et bibendum erat
-                      vestibulum vitae. Sed in euismod neque. Nam a elit a
-                      turpis rhoncus pharetra dapibus sit amet turpis. Morbi
-                      magna purus, accumsan et hendrerit at, congue eu massa.
-                      .{" "}
+                  <div className="flex flex-col w-full min-h-full ">
+                    <p className="h-fit w-full border-b border-(--color-line)/30 font-[0.9rem] font-sans text-end px-3">
+                      <code className="font-mono text-(--color-text-secondary)/30 tracking-wide">
+                        &lt;div &gt;
+                      </code>
                     </p>
                     <div className="flex w-full h-5 border-b border-(--color-line)/30" />
-                    <p className="h-fit w-full border-b border-(--color-line)/30 text-(--color-text-secondary) font-[0.9rem] font-sans text-end px-3">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam ullamcorper facilisis erat, et bibendum erat
-                      vestibulum vitae. Sed in euismod neque. Nam a elit a
-                      turpis rhoncus pharetra dapibus sit amet turpis. Morbi
-                      magna purus, accumsan et hendrerit at, congue eu massa.
-                      .{" "}
+                    <p className="h-fit w-full border-b border-(--color-line)/30 font-[0.9rem] font-sans text-end px-3">
+                      Danilo is a front-end developer 
                     </p>
                   </div>
                 </div>
 
                 <div className="flex w-full h-fit border-b border-(--color-line)">
                   <div className="h-fit items-center w-full mt-10">
-                    <p className="text-2xl font-semibold font-mono px-3 border-y border-(--color-line)/30">
+                    <p id="technical-skills" className="text-2xl font-semibold font-mono px-3 border-y border-(--color-line)/30">
                       Technical skills
                     </p>
 
@@ -237,17 +181,20 @@ export default function MainPortfolioPage() {
 
             <div className="flex relative flex-col w-full h-fit">
               <div className="h-10 items-center w-full border-y border-(--color-line)/30 mt-10">
-                <p id="about-me" className="text-4xl font-bold font-mono px-3">
+                <p
+                  id="contact-me"
+                  className="text-4xl font-bold font-mono px-3"
+                >
                   Contact me
                 </p>
               </div>
 
-              <div className="grid grid-cols-[400px_20px_1fr] grid-rows-1 border-t border-(--color-line) my-10">
+              <div className="grid grid-cols-[400px_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
                 {/* Email */}
-                <div className="font-mono border-b border-(--color-line)/30 p-3">
+                <div className="font-mono border-b border-(--color-line)/50 p-3">
                   <p>Your name</p>
                 </div>
-                <div className="border-x border-(--color-line)/30" />
+                <div className="border-x border-(--color-line)/50" />
                 <div className="border-r border-b border-(--color-line)/30 py-0 text-[0.9rem]">
                   <input
                     type="text"
@@ -257,11 +204,11 @@ export default function MainPortfolioPage() {
                 </div>
 
                 {/*Subject */}
-                <div className="row-start-2 font-mono border-b border-t border-(--color-line)/30 p-3 mt-5">
+                <div className="flex row-start-2 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5">
                   <p>Your email</p>
                 </div>
-                <div className="row-start-2 border-x border-(--color-line)/30" />
-                <div className="row-start-2 border-r border-b border-(--color-line)/30 py-0 text-[0.9rem] mt-5 border-t">
+                <div className="flex row-start-2 border-x border-(--color-line)/50" />
+                <div className="flex row-start-2 border-r border-b border-(--color-line)/30 py-0 text-[0.9rem] mt-5 border-t">
                   <input
                     type="email"
                     placeholder="example@gmail.com"
@@ -270,38 +217,36 @@ export default function MainPortfolioPage() {
                 </div>
 
                 {/*Subject */}
-                <div className="row-start-3 flex items-center w-full h-full font-mono border-b border-t border-(--color-line)/30 p-3 mt-5">
+                <div className="flex row-start-3 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-[calc(100%-20px)] items-center">
                   <p>Your message</p>
                 </div>
-                <div className="row-start-3 border-x border-(--color-line)/30" />
-                <div className="row=start-3 border-r border-(--color-line)/30 py-0 text-[0.9rem] mt-5">
+                <div className="flex row-start-3 border-x border-(--color-line)/50" />
+                <div className="flex row-start-3 border-r border-b border-(--color-line)/30 py-0 text-[0.9rem] mt-5 border-t">
                   <textarea
-                    placeholder="Hi! I would like to inquire..."
-                    className="bg-(--color-brand-blue-dark) rounded-t-[20px] rounded-b-[20px] w-full flex px-5 py-3 h-full resize-none"
+                    placeholder="example@gmail.com"
+                    className="bg-(--color-brand-blue-dark) rounded-[20px] py-3 w-full h-40 flex px-5 resize-none"
                   />
                 </div>
 
-                {/* Submit button */}
-                <div className=" row-start-4 flex items-center w-full h-full font-mono border-b border-(--color-line)/30 p-3" />
-                <div className="row-start-4 border-x border-(--color-line)/30" />
-                <div className="row=start-4 border-r border-b border-t border-(--color-line)/30 py-0 text-[0.9rem] mt-5">
-                  <Link
-                    href="/"
-                    className="row-start-4 flex w-full h-fit text-[0.9rem] bg-(--color-brand-purple)/40 rounded-[20px] items-center justify-center py-2"
-                  >
-                    <p>Submit</p>
-                  </Link>
+                {/*Submit */}
+                <div className="flex row-start-4 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-10 items-center" />
+                <div className="flex row-start-4 border-x border-b border-(--color-line)/50" />
+                <div className="flex row-start-4 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
+                  <button className="bg-(--color-brand-purple) w-full h-full rounded-[20px] hover:bg-(--color-brand-purple-dark) cursor-pointer active:bg-fuchsia-800 transitionall duration-100">
+                    <p className="font-normal text-white">Submit</p>
+                  </button>
                 </div>
+
+                <div className="row-start-5 col-span-3 flex w-full h-5 border-b border-(--color-line)/50" />
               </div>
 
               <DoubleLineBorder className="-bottom-6" />
-              <p className="absolute -left-16 z-50 bottom-13 rotate-270 font-mono text-(--color-brand-purple)">Contact me</p>
+              <p className="absolute -left-16 z-50 bottom-13 rotate-270 font-mono text-(--color-brand-purple)">
+                Contact me
+              </p>
             </div>
 
-            {/* Separation-4 */}
-            <div className="flex relative w-full h-60 justify-end">
-
-            </div>
+            {/* footer */}
           </div>
         </div>
 

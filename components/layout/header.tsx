@@ -20,9 +20,9 @@ export default function TopBar() {
 
         {/* Right side */}
         <div className="flex w-full h-full items-center justify-end gap-10">
-          <ButtonSlantedBg text="Resume" />
+          <ButtonSlantedBg text="Resume" link="/danilo-pelin-resume.pdf"/>
 
-          <ButtonSlantedBg text="Contacts" />
+          <ButtonSlantedBg text="Contacts" link="#contact-me"/>
         </div>
       </div>
     );
