@@ -1,9 +1,9 @@
-export const GithubIcon = () => {
+export const GithubIcon = ({width=16, height=16}:{width?:number, height?:number}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width={width}
+      height={height}
       fill="currentColor"
       viewBox="0 0 16 16"
     >
@@ -84,13 +84,15 @@ export const TypescriptIcon = ({width = 51, height = 51}:{width?: number, height
 
 export const TailwindCSSIcon = ({
   width = 150,
+  height = 17
 }: {
   width?: number;
+  height?:number;
 }) => {
   return (
     <svg
       width={width}
-      height="17"
+      height={height}
       viewBox="0 0 136 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -118,11 +120,11 @@ export const TailwindCSSIcon = ({
   );
 };
 
-export const SupabaseIcon = ({width = 115}:{width?:number}) => {
+export const SupabaseIcon = ({width = 115, height = 22}:{width?:number, height?:number}) => {
   return (
     <svg
       width={width}
-      height="22"
+      height={height}
       viewBox="0 0 115 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -267,7 +269,7 @@ export const NextJSIcon = ({width=107,height=21}:{width?:number,height?:number})
   );
 }
 
-export const VercelIcon = ({width=113,height=22}:{width?:number,height?:number}) => {
+export const VercelIcon = ({width=113, height=22} : {width?:number, height?:number}) => {
   return (
     <svg
       width={width}

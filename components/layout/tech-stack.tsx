@@ -59,7 +59,7 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <TailwindCSSIcon />
+          <TailwindCSSIcon width={170} height={30}/>
         </Link>
       </div>
       <div className="row-start-2 border-b border-x border-(--color-line)/50 items-center justify-center flex">
@@ -68,7 +68,7 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <SupabaseIcon />
+          <SupabaseIcon width={160} height={30}/>
         </Link>
       </div>
       <div className="row-start-2 border-b border-l border-(--color-line)/50">
@@ -179,7 +179,7 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <VercelIcon />
+          <VercelIcon width={150} height={35}/>
         </Link>
       </div>
       <div className="row-start-5 border-r border-(--color-line)/50"></div>
@@ -191,7 +191,7 @@ export default function TechStack() {
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <GithubIcon />
+            <GithubIcon width={49} height={49}/>
           </Link>
           <Link
             href="https://git-scm.com/"

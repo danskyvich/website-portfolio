@@ -23,7 +23,7 @@ export default function PortfolioHeader() {
           exploring the field of backend development, relational database
           management, and new front-end frameworks.
         </p>
-        <p className="absolute hidden md:block -left-12 bottom-5 rotate-270 font-mono text-(--color-brand-purple)">
+        <p className="absolute hidden md:block -left-11 bottom-5 rotate-270 font-mono text-(--color-brand-purple)">
           header
         </p>
       </div>

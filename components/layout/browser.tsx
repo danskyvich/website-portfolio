@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Browser() {
   return (
-    <div className="flex flex-col w-full h-125">
+    <div className="flex flex-col w-full min-h-125">
       {/* tab */}
       <div className="flex w-full h-[7%] rounded-t-4xl bg-(--color-brand-blue-dark) px-20 gap-5 py-2">
         <div className="flex flex-1 w-full h-full items-center justify-center gap-3">
@@ -23,17 +23,28 @@ export default function Browser() {
 
       <div className="flex flex-col w-full h-[93%] rounded-b-4xl bg-(--color-brand-blue-super-dark) px-3">
         {/* animated console-like text gif */}
-        <div className="flex w-full h-[7%]">
-
-        </div>
+        <div className="flex w-full h-[7%]"></div>
         <div className="flex w-full h-[80%]">
-            <div className="grid grid-cols-[200px_1fr] grid-rows-2 w-full h-full">
-                <div className="row-span-2 col-start-1">
-                    <div className="flex w-full h-full bg-(--color-brand-blue-dark)">
-                        <Image src="/grad-pic.png" alt={"danilo's picture grad"} width={200} height={400} className="rounded-[20px]"/>
-                    </div>
-                </div>
+          <div className="grid grid-cols-3 gap-x-3 grid-rows-2 w-full h-full">
+            <div className="relative col-start-1 row-span-2">
+              <Image
+                src="/grad-pic.png"
+                alt="alt"
+                fill
+                className="rounded-xl object-cover"
+              />
             </div>
+            <div className="relative col-start-2 row-span-2">
+              <Image
+                src="/grad_pic_adu.png"
+                alt="alt"
+                fill
+                className="rounded-xl object-cover"
+              />
+            </div>
+            <div className="col-start-3 row-span-1"></div>
+            <div className="col-start-3 row-span-1"></div>
+          </div>
         </div>
       </div>
     </div>
