@@ -42,7 +42,9 @@ export default function Footer() {
               key={key}
             >
               {item.icon}
-              <p className="flex text-[0.9rem]">{item.name}</p>
+              <p className="flex text-[0.9rem] line-clamp-1 whitespace-nowrap">
+                {item.name}
+              </p>
             </div>
           ))}
         </div>
@@ -51,7 +53,7 @@ export default function Footer() {
           {links.map((item, key) => (
             <a
               href={item.link}
-              className="font-light hover:underline cursor-pointer"
+              className="font-light hover:underline cursor-pointer line-clamp-1 whitespace-nowrap"
               key={key}
             >
               {item.name}
@@ -69,7 +71,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <p>{item.name}</p>
+                <p className="line-clamp-1 whitespace-nowrap">{item.name}</p>
               </a>
             </div>
           ))}
