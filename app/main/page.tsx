@@ -151,14 +151,17 @@ export default function MainPortfolioPage() {
                     </p>
                     <div className="flex w-full h-5 border-b border-(--color-line)/30" />
                     <p className="h-fit w-full border-b border-(--color-line)/30 font-[0.9rem] font-sans text-end px-3">
-                      Danilo is a front-end developer 
+                      Danilo is a front-end developer
                     </p>
                   </div>
                 </div>
 
                 <div className="flex w-full h-fit border-b border-(--color-line)">
                   <div className="h-fit items-center w-full mt-10">
-                    <p id="technical-skills" className="text-2xl font-semibold font-mono px-3 border-y border-(--color-line)/30">
+                    <p
+                      id="technical-skills"
+                      className="text-2xl font-semibold font-mono px-3 border-y border-(--color-line)/30"
+                    >
                       Technical skills
                     </p>
 
@@ -189,13 +192,13 @@ export default function MainPortfolioPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-[400px_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
+              <div className="grid grid-cols-[30%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
                 {/* Email */}
-                <div className="font-mono border-b border-(--color-line)/50 p-3">
+                <div className="flex font-mono border-b border-(--color-line)/50 p-3">
                   <p>Your name</p>
                 </div>
-                <div className="border-x border-(--color-line)/50" />
-                <div className="border-r border-b border-(--color-line)/30 py-0 text-[0.9rem]">
+                <div className="flex border-x border-(--color-line)/50" />
+                <div className="flex border-r border-b border-(--color-line)/30 py-0 text-[0.9rem]">
                   <input
                     type="text"
                     placeholder="e.g Juan Dela Cruz"
@@ -237,7 +240,7 @@ export default function MainPortfolioPage() {
                   </button>
                 </div>
 
-                <div className="row-start-5 col-span-3 flex w-full h-5 border-b border-(--color-line)/50" />
+                <div className="flex row-start-5 col-span-3 w-full h-5 border-b border-(--color-line)/50" />
               </div>
 
               <DoubleLineBorder className="-bottom-6" />
@@ -247,7 +250,7 @@ export default function MainPortfolioPage() {
             </div>
 
             {/* footer */}
-            <Footer/>
+            <Footer />
           </div>
         </div>
 
