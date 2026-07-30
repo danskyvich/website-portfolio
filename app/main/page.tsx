@@ -1,6 +1,5 @@
 "use client";
 
-import Browser from "@/components/layout/browser";
 import SectionHeader from "@/components/layout/section-header";
 import TechStack from "@/components/layout/tech-stack";
 import TopBar from "@/components/layout/header";
@@ -23,6 +22,7 @@ import { ProjectInformation } from "@/lib/types";
 import { ArrowUpRight, Section, X } from "lucide-react";
 import Image from "next/image";
 import Footer from "@/components/layout/footer";
+import Browser from "@/components/ui/browser";
 
 const firstProjectIcons: ProjectInformation[] = [
   { icon: <TypescriptIcon />, link: "https://www.typescriptlang.org" },
@@ -84,7 +84,7 @@ export default function MainPortfolioPage() {
               <div className="flex flex-col w-full border-l border-(--color-line) h-full text-end">
                 <div className="flex flex-col w-full">
                   {/* Title */}
-                  <p className="w-full font-mono text-3xl font-light pr-3 border-b border-(--color-line)/30">
+                  <p className="w-full font-bold py-3 xl:py-0 text-center xl:text-end font-mono text-3xl pr-3 border-b border-(--color-line)/30">
                     Money{" "}
                     <span className="font-bold bg-clip-text text-transparent bg-linear-to-r from-(--color-brand-cyan) to-(--color-brand-green)">
                       Tracker
@@ -93,7 +93,7 @@ export default function MainPortfolioPage() {
 
                   {/* Subtitle */}
                   <div className="flex w-full h-fit">
-                    <p className="flex h-fit pl-[30%] pr-3 text-(--color-text-secondary)">
+                    <p className="flex h-fit text-center xl:text-end px-[20%] xl:px-[30%_5] text-(--color-text-secondary) py-3 xl:py-0">
                       A web application that monitors your monthly finances by
                       recording your transactions and analyzing inflows and
                       outflows
@@ -138,47 +138,67 @@ export default function MainPortfolioPage() {
 
           {/* About me */}
           <div className="flex relative flex-col w-full h-fit">
-            <SectionHeader
-              title="About me"
-              subtitle="A short description about me, and my current technical skills"
-              id="about-me"
-            />
+            <SectionHeader title="About me" id="about-me" />
 
             <div className="grid grid-rows-1 h-fit mt-15 border-t border-(--color-line)">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_30px_400px] border-b border-(--color-line) w-full h-fit">
-                {/* Browser */}
+              <div className="grid grid-cols-1 xl:grid-cols-[32%_20px_1fr] border-b border-(--color-line)">
                 <Browser />
 
-                <div className="border-x border-(--color-line)" />
+                <div className="border-x border-(--color-line)/50" />
 
-                <div className="flex flex-col w-full min-h-full justify-between">
-                  <div>
-                    <p className="h-fit w-full border-b border-(--color-line)/50 font-[0.9rem] font-sans text-end px-3">
-                      <code className="font-mono text-(--color-text-secondary)/30 tracking-tight line-clamp-1">
-                        &lt;div className="text-gray w-[60%]"/&gt;
-                      </code>
+                <article className="flex flex-col w-full h-full justify-between">
+                  <div className="flex flex-col border-b border-(--color-line)/50 w-full justify-end">
+                    <p className="text-slate-700 font-mono line-clamp-1 text-[0.9rem] w-full h-fit text-end border-b border-(--color-line)/50">
+                      &lt;div className="flex w-full h-fit text-[0.9rem]
+                      font-sans text-white"&gt;
                     </p>
-                    <div className="flex w-full h-5 border-b border-(--color-line)/50" />
-                    <p className="h-fit w-full border-b border-(--color-line)/50 font-[0.9rem] font-sans text-end px-3">
+                    <p className="border-y text-center xl:text-end xl:pl-[10%] py-5 xl:py-0 pr-1 border-(--color-line)/50 mt-5">
                       Hi! I'm{" "}
-                      <span className="font-mono bg-clip-text text-transparent bg-(--color-brand-blue-accent) font-bold">
+                      <span className="text-(--color-brand-blue-accent) font-mono">
                         nilo
                       </span>
-                      , and I love building websites! I had worked as a
-                      full-stack cloud developer at my previous full-stack cloud development internship in <b>Makati</b> which
-                      gave me 
+                      , and I like creating websites! My journey started at a
+                      local IT solutions company in Makati where I got my first
+                      taste of cloud operations and full-stack development. As
+                      of now, you'll usually find me working on personal
+                      projects, taking on occasional side quests, and building
+                      cool things as a developer at a local startup{" "}
+                      <span className="text-[0.8rem] text-(--color-text-secondary)">
+                        (of which I also founded with four other people)
+                      </span>
+                      .
                     </p>
-                    <p className="h-fit w-full border-y border-(--color-line)/50 font-[0.9rem] font-sans text-end px-3 mt-5">
-                      When I'm not facing my scree
+                    <p className="h-fit w-full border-y border-(--color-line)/50 mt-5 justify-end text-center xl:text-end pr-1 py-5 xl:py-0 xl:pl-[10%]">
+                      When I'm away from my laptop, you'll usually find me
+                      café-hopping around Manila, running around UP Diliman,
+                      exploring new simulation games on Steam, or keeping up
+                      with the latest tech events and framework releases through
+                      forums and social media.
+                    </p>
+                    <p className="h-fit w-full border-t border-(--color-line)/50 mt-5 justify-end text-center xl:text-end pr-1 py-5 xl:py-0 xl:pl-[10%]">
+                      I believe that{" "}
+                      <span className="font-mono text-(--color-brand-purple)">
+                        continuous learning
+                      </span>
+                      ,{" "}
+                      <span className="font-mono text-(--color-brand-blue-accent)">
+                        open-mindedness
+                      </span>
+                      , and{" "}
+                      <span className="text-[#00D9FF] font-mono">
+                        curiousity
+                      </span>{" "}
+                      is not just crucial as a professional, but in general as
+                      well. I also believe that technology should always serve
+                      people, and that making it more accessible is essential in
+                      today's digital world.
                     </p>
                   </div>
 
-                  <div className="flex w-full h-fit self-end-safe justify-end border-t border-(--color-line)/30 mt-5">
-                    <code className="font-mono text-(--color-text-secondary)/30 tracking-tight line-clamp-1">
-                      &lt;/div&gt;
-                    </code>
-                  </div>
-                </div>
+                  <p className="w-full h-fit font-mono text-end text-slate-700 line-clamp-1 text-[0.9rem] border-t border-(--color-line)/50">
+                    &lt;/div&gt;
+                  </p>
+                </article>
               </div>
 
               <div className="flex w-full h-fit border-b border-(--color-line)">
@@ -215,12 +235,12 @@ export default function MainPortfolioPage() {
             </div>
 
             <div className="grid grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
-              {/* Email */}
+              {/* Your name */}
               <div className="flex font-mono border-b border-(--color-line)/50 p-3">
                 <p>Your name</p>
               </div>
               <div className="flex border-x border-(--color-line)/50" />
-              <div className="flex border-r border-b border-(--color-line)/30 py-0 text-[0.9rem]">
+              <div className="flex border-r border-b border-(--color-line)/50 py-0 text-[0.9rem]">
                 <input
                   type="text"
                   placeholder="e.g Juan Dela Cruz"
@@ -228,12 +248,12 @@ export default function MainPortfolioPage() {
                 />
               </div>
 
-              {/*Subject */}
+              {/* Your email */}
               <div className="flex row-start-2 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5">
                 <p>Your email</p>
               </div>
               <div className="flex row-start-2 border-x border-(--color-line)/50" />
-              <div className="flex row-start-2 border-r border-b border-(--color-line)/30 py-0 text-[0.9rem] mt-5 border-t">
+              <div className="flex row-start-2 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
                 <input
                   type="email"
                   placeholder="example@gmail.com"
@@ -241,19 +261,19 @@ export default function MainPortfolioPage() {
                 />
               </div>
 
-              {/*Subject */}
+              {/* Your message */}
               <div className="flex row-start-3 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-[calc(100%-20px)] items-center">
                 <p>Your message</p>
               </div>
               <div className="flex row-start-3 border-x border-(--color-line)/50" />
-              <div className="flex row-start-3 border-r border-b border-(--color-line)/30 py-0 text-[0.9rem] mt-5 border-t">
+              <div className="flex row-start-3 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
                 <textarea
                   placeholder="Hi! I would like to..."
                   className="bg-(--color-brand-blue-dark) rounded-[20px] py-3 w-full h-40 flex px-5 resize-none"
                 />
               </div>
 
-              {/*Submit */}
+              {/* Submit */}
               <div className="flex row-start-4 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-10 items-center" />
               <div className="flex row-start-4 border-x border-b border-(--color-line)/50" />
               <div className="flex row-start-4 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
