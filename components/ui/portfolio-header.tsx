@@ -1,7 +1,9 @@
+import { getCommits } from "@/lib/get-commits";
 import DoubleLineBorder from "./double-line-border";
 import LoopingText from "./looping-text";
 
-export default function PortfolioHeader() {
+export default async function PortfolioHeader() {
+  const commits = await getCommits();
   return (
     <div className="flex relative flex-col w-full h-150 justify-end">
       <div className="flex w-full h-fit items-end">

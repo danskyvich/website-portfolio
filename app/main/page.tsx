@@ -2,7 +2,6 @@
 
 import SectionHeader from "@/components/layout/section-header";
 import TechStack from "@/components/layout/tech-stack";
-import TopBar from "@/components/layout/header";
 import Button from "@/components/ui/button";
 import DoubleLineBorder from "@/components/ui/double-line-border";
 import PortfolioHeader from "@/components/ui/portfolio-header";
@@ -18,7 +17,7 @@ import {
   VercelIcon,
   VSCodeIcon,
 } from "@/lib/icons";
-import { ProjectInformation } from "@/lib/types";
+import { CommitProps, ProjectInformation } from "@/lib/types";
 import { ArrowUpRight, Section, X } from "lucide-react";
 import Image from "next/image";
 import Footer from "@/components/layout/footer";
