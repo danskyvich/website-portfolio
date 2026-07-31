@@ -1,11 +1,11 @@
-
+"use client"
 interface SectionHeaderProps {
   title: string;
   subtitle?: string;
   id: string;
 }
 
-export default async function SectionHeader({
+export default function SectionHeader({
   title,
   subtitle,
   id,

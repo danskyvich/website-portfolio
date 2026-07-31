@@ -1,4 +1,4 @@
-import { ProjectInformation } from "@/lib/types";
+import { ProjectInformation } from "@/features/my-works/types/types";
 import Link from "next/link";
 
 interface TechStackGridProps {

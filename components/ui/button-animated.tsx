@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-export default function Button({text, link, icon}: {text:string, link:string, icon: React.ReactNode}) {
+export default function Button({text, link, icon}: {text:string, link:string, icon?: React.ReactNode}) {
     return (
       <motion.a
         className="flex cursor-pointer w-full h-full items-center justify-center text-[0.9rem] bg-(--color-brand-blue-dark) hover:bg-[#31314d] rounded-xl py-2 mx-2 gap-2"

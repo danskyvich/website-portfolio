@@ -1,6 +1,5 @@
-// app/api/github/route.ts
 import { NextResponse } from "next/server";
-import { getCommits } from "@/lib/get-commits";
+import { getCommits } from "@/api/get-commits";
 
 export async function GET() {
   try {

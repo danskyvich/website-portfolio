@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "@/components/layout/theme-provider";
+import ThemeProvider from "@/components/theme-provider";
 import TopBar from "@/components/layout/header";
 
 const robotoMono = Roboto_Mono({

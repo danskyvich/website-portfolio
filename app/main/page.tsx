@@ -1,11 +1,9 @@
 "use client";
 
-import SectionHeader from "@/components/layout/section-header";
-import TechStack from "@/components/layout/tech-stack";
-import Button from "@/components/ui/button";
+import SectionHeader from "@/components/ui/section-header";
+import TechStack from "@/features/about-me/components/tech-stack";
 import DoubleLineBorder from "@/components/ui/double-line-border";
-import PortfolioHeader from "@/components/ui/portfolio-header";
-import TechStackGrid from "@/components/ui/tech-stack-grid";
+import PortfolioHeader from "@/features/name-header/components/portfolio-header";
 import {
   CSSIcon,
   GithubIcon,
@@ -17,13 +15,15 @@ import {
   VercelIcon,
   VSCodeIcon,
 } from "@/lib/icons";
-import { CommitProps, ProjectInformation } from "@/lib/types";
-import { ArrowUpRight, Section, X } from "lucide-react";
+import { Commit } from "@/features/name-header/types/user";
 import Image from "next/image";
 import Footer from "@/components/layout/footer";
-import Browser from "@/components/ui/browser";
+import Browser from "@/features/about-me/components/browser";
+import MyWorkItem from "@/features/my-works/components/my-work-item";
+import Input from "@/components/ui/input";
+import ContactMeForm from "@/features/contact-me/components/contact-me-form";
 
-const firstProjectIcons: ProjectInformation[] = [
+const firstProjectIcons = [
   { icon: <TypescriptIcon />, link: "https://www.typescriptlang.org" },
   { icon: <TailwindCSSIcon />, link: "https://www.tailwindcss.com" },
   { icon: <SupabaseIcon />, link: "https://www.supabase.com" },
@@ -40,7 +40,7 @@ const firstProjectIcons: ProjectInformation[] = [
   { icon: <VSCodeIcon />, link: "https://code.visualstudio.com" },
 ];
 
-export default function MainPortfolioPage() {
+export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
   return (
     <div className="flex flex-col w-full h-full overflow-x-hidden overflow-y-auto">
       <div className="grid grid-cols-[10px_1fr_10px] md:grid-cols-[50px_1fr_50px] lg:grid-cols-[150px_1fr_150px] 2xl:grid-cols-[17.5%_1fr_17.5%] w-full h-full">
@@ -49,7 +49,7 @@ export default function MainPortfolioPage() {
         {/* Content goes here */}
         <div className="flex flex-col w-full h-full border-x border-(--color-line)">
           {/* header */}
-          <PortfolioHeader />
+          <PortfolioHeader commits={commits} />
 
           {/* Separation-1 */}
           <div className="flex relative w-full h-80 justify-end">
@@ -57,77 +57,23 @@ export default function MainPortfolioPage() {
           </div>
 
           {/* My works */}
-          <div className="flex flex-col relative w-full h-fit">
+          <div className="flex relative flex-col relative w-full h-fit">
             <SectionHeader
               title="My works"
               subtitle="My finished projects, either academic or personal, that I compiled for the last four years."
               id="my-works"
             />
 
-            {/* 1st project */}
-            <div className="grid grid-cols-1 grid-rows-1 xl:grid-cols-[1fr_1fr] w-full border-y border-(--color-line) mt-15">
-              {/* left side */}
-              <div className="flex w-full h-fit justify-center">
-                <div className="bg-(--color-brand-blue-dark) w-full h-fit p-2">
-                  <Image
-                    src="/first-project.png"
-                    alt="alt"
-                    width={900}
-                    height={130}
-                    className="rounded-[10%]"
-                  />
-                </div>
-              </div>
+            <MyWorkItem
+              title="Money Tracker"
+              description="A web application that monitors your monthly finances by recording your transactions and analyzing inflows and outflows"
+              image="/first-project.png"
+              techStack={firstProjectIcons}
+            />
 
-              {/* Right side */}
-              <div className="flex flex-col w-full border-l border-(--color-line) h-full text-end">
-                <div className="flex flex-col w-full">
-                  {/* Title */}
-                  <p className="w-full font-bold py-3 xl:py-0 text-center xl:text-end font-mono text-3xl pr-3 border-b border-(--color-line)/30">
-                    Money{" "}
-                    <span className="font-bold bg-clip-text text-transparent bg-linear-to-r from-(--color-brand-cyan) to-(--color-brand-green)">
-                      Tracker
-                    </span>
-                  </p>
-
-                  {/* Subtitle */}
-                  <div className="flex w-full h-fit">
-                    <p className="flex h-fit text-center xl:text-end px-[20%] xl:px-[30%_5] text-(--color-text-secondary) py-3 xl:py-0">
-                      A web application that monitors your monthly finances by
-                      recording your transactions and analyzing inflows and
-                      outflows
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col w-full h-full">
-                  <div className="flex w-full border-y h-4 border-(--color-line)" />
-                  <div className="flex w-full h-fit py-2">
-                    <Button
-                      text="View on Github"
-                      icon={<GithubIcon />}
-                      link="https://github.com/danskyvich/money-tracker"
-                    />
-                    <Button
-                      text="View the demo"
-                      icon={<ArrowUpRight />}
-                      link="/"
-                    />
-                  </div>
-                  <div className="flex w-full border-y h-4 border-(--color-line) items-center justify-center" />
-
-                  {/* Used tech stack 
-                      make this a component
-                    */}
-                  <TechStackGrid icons={firstProjectIcons} />
-
-                  <DoubleLineBorder className="-bottom-6" />
-                </div>
-              </div>
-              <p className="absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
-                my works
-              </p>
-            </div>
+            <p className="absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
+              my works
+            </p>
           </div>
 
           {/* Separation-2 */}
@@ -233,56 +179,7 @@ export default function MainPortfolioPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
-              {/* Your name */}
-              <div className="flex font-mono border-b border-(--color-line)/50 p-3">
-                <p>Your name</p>
-              </div>
-              <div className="flex border-x border-(--color-line)/50" />
-              <div className="flex border-r border-b border-(--color-line)/50 py-0 text-[0.9rem]">
-                <input
-                  type="text"
-                  placeholder="e.g Juan Dela Cruz"
-                  className="bg-(--color-brand-blue-dark) rounded-[40px] w-full h-full flex px-5"
-                />
-              </div>
-
-              {/* Your email */}
-              <div className="flex row-start-2 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5">
-                <p>Your email</p>
-              </div>
-              <div className="flex row-start-2 border-x border-(--color-line)/50" />
-              <div className="flex row-start-2 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
-                <input
-                  type="email"
-                  placeholder="example@gmail.com"
-                  className="bg-(--color-brand-blue-dark) rounded-[40px] w-full h-full flex px-5"
-                />
-              </div>
-
-              {/* Your message */}
-              <div className="flex row-start-3 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-[calc(100%-20px)] items-center">
-                <p>Your message</p>
-              </div>
-              <div className="flex row-start-3 border-x border-(--color-line)/50" />
-              <div className="flex row-start-3 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
-                <textarea
-                  placeholder="Hi! I would like to..."
-                  className="bg-(--color-brand-blue-dark) rounded-[20px] py-3 w-full h-40 flex px-5 resize-none"
-                />
-              </div>
-
-              {/* Submit */}
-              <div className="flex row-start-4 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-10 items-center" />
-              <div className="flex row-start-4 border-x border-b border-(--color-line)/50" />
-              <div className="flex row-start-4 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
-                <button className="bg-(--color-brand-purple) w-full h-full rounded-[20px] hover:bg-(--color-brand-purple-dark) cursor-pointer active:bg-fuchsia-800 transitionall duration-100">
-                  <p className="font-normal text-white">Submit</p>
-                </button>
-              </div>
-
-              <div className="flex row-start-5 col-span-3 w-full h-5 border-b border-(--color-line)/50" />
-            </div>
+            <ContactMeForm/>
 
             <DoubleLineBorder className="-bottom-6" />
             <p className="absolute -left-16 z-50 bottom-13 rotate-270 font-mono text-(--color-brand-purple)">
@@ -290,7 +187,6 @@ export default function MainPortfolioPage() {
             </p>
           </div>
 
-          {/* footer */}
           <Footer />
         </div>
       </div>
