@@ -16,7 +16,7 @@ export default function Modal({ toggle, message, header, icon }: ModalProps) {
   useEffect(() => {
     if (!toggle) return
     setIsVisible(true)
-    const timer = setTimeout(() => setIsVisible(false), 5000);
+    const timer = setTimeout(() => setIsVisible(false), 4000);
     return () => clearTimeout(timer);
   }, [toggle]);
 
