@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Website Portfolio
 
-First, run the development server:
+My web portfolio, showcasing my completed projects and a short section about me. I work on this project on a span of three (3) weeks.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Authors
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [@danskyvich](https://github.com/danskyvich)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Client:** React, HTML, Javascript, Typescript, TailwindCSS, Zod, Lucide-react, Framer motion
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Server:** NextJS, Resend API, Github API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Cross platform (Web on PC and android)
+- Contact form (using resend API)
+- Responsiveness
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+![Logo](/public/favicon.png)
+
+
+## Lessons Learned
+
+Through-out the development process, I learned a lot of things regarding frameworks and project structure. I implemented a feature-branch git flow where each layout UI has its own feature branch, and related developments happen locally. Each branch, when ready, is to be merged with the `develop` branch, itself a branch of the `main` branch.
+
+I also learned about a bit of developing API calls and endpoints. I learned how to use official documentations and scout the depths of the Internet for help on utilizing both **Github** and **Resend** APIs. I also learned about SSR, `api` routes which serve as endpoints (`app/{name}/api/route.ts`), async/await, Promises, and destructuring.
+
