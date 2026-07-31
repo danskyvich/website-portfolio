@@ -38,6 +38,8 @@ export default function ButtonSlantedBg({
       initial="rest"
       whileHover="hover"
       whileTap="hover"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <motion.div
         className="absolute inset-y-0 left-0 bg-linear-to-r from-(--color-brand-blue) to-(--color-brand-purple)"

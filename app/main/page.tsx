@@ -83,7 +83,7 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
 
           {/* About me */}
           <div className="flex relative flex-col w-full h-fit">
-            <SectionHeader title="About me" id="about-me" />
+            <SectionHeader title="About me" subtitle="A short description about me and my technical skills" id="about-me" />
 
             <div className="grid grid-rows-1 h-fit mt-15 border-t border-(--color-line)">
               <div className="grid grid-cols-1 xl:grid-cols-[32%_20px_1fr] border-b border-(--color-line)">
@@ -108,8 +108,8 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
                       of now, you'll usually find me working on personal
                       projects, taking on occasional side quests, and building
                       cool things as a developer at a local startup{" "}
-                      <span className="text-[0.8rem] text-(--color-text-secondary)">
-                        (of which I also founded with four other people)
+                      <span className="text-[0.8rem] text-slate-400">
+                        (of which I founded with four other people)
                       </span>
                       .
                     </p>
