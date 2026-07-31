@@ -2,49 +2,85 @@ import Input from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { ContactMeData, ContactMeSchema } from "../schemas/contact-me-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { InfoIcon } from "lucide-react";
+import Modal from "@/components/ui/modal";
+import { SendMessageToEmail } from "../api/send-email";
+import { useState } from "react";
 
 export default function ContactMeForm() {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<{
+    success: true | false,
+    message: string,
+  } | null>(null);
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitted },
   } = useForm<ContactMeData>({
     resolver: zodResolver(ContactMeSchema),
-  })
+  });
 
-  const onSubmit = (data: ContactMeData) => {
-    // resend api 
-  }
+  const onSubmit = async (data: ContactMeData) => {
+    setLoading(true)
+    
+    const result = await SendMessageToEmail(data);
+    console.log("SendMessageToEmail result:", result);
 
-  const firstError = Object.values(errors)[0]?.message;
 
+    if (!result.success) {
+      setSuccess({ success: false, message: result.error});
+    } else {
+      setSuccess({ success: true, message: "Message sent successfully"});
+    }
+    
+    setLoading(false)
+  };
+
+
+  const hasErrors = Object.keys(errors).length > 0;
+  const combinedError = isSubmitted && hasErrors ? "Please fill out all fields correctly" : undefined;
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
-      {/* Your name */}
-      <div className="flex font-mono border-b border-(--color-line)/50 p-3">
-        <p>Your name</p>
-      </div>
-      <div className="flex border-x border-(--color-line)/50" />
-      <div className="flex border-r border-b border-(--color-line)/50 py-0 text-[0.9rem]">
-        <Input
-          type="text"
-          placeholder="e.g Juan dela Cruz"
-          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
-          {...register("name")}
-        />
-      </div>
+    <form
+      onSubmit={handleSubmit(onSubmit, errors => {
+        console.log("Current errors:", errors);
+      })}
+      className="grid grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10"
+    >
+      <Modal
+        header={success?.success ? "Message sent" : "Submission error"}
+        message={success?.message}
+        icon={<InfoIcon size={20}/>}
+        toggle={success?.message}
+      />
 
       {/* Your email */}
-      <div className="flex row-start-2 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5">
+      <div className="flex font-mono border-b border-(--color-line)/50 p-3">
         <p>Your email</p>
       </div>
-      <div className="flex row-start-2 border-x border-(--color-line)/50" />
-      <div className="flex row-start-2 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
+      <div className="flex border-x border-(--color-line)/50" />
+      <div className="flex flex-col border-r border-b border-(--color-line)/50 py-0 text-[0.9rem]">
         <Input
           type="email"
           placeholder="example@gmail.com"
           className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
-          {...register("email")}
+          register={register}
+          registerName="email"
+        />
+      </div>
+
+      {/* Your subject */}
+      <div className="flex row-start-2 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5">
+        <p>Your subject</p>
+      </div>
+      <div className="flex row-start-2 border-x border-(--color-line)/50" />
+      <div className="flex row-start-2 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
+        <Input
+          type="text"
+          placeholder="Re: project inquiry"
+          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
+          register={register}
+          registerName="subject"
         />
       </div>
 
@@ -65,8 +101,8 @@ export default function ContactMeForm() {
       <div className="flex row-start-4 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-10 items-center" />
       <div className="flex row-start-4 border-x border-b border-(--color-line)/50" />
       <div className="flex row-start-4 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
-        <button className="bg-(--color-brand-purple) w-full h-full rounded-[20px] hover:bg-(--color-brand-purple-dark) cursor-pointer active:bg-fuchsia-800 transitionall duration-100">
-          <p className="font-normal text-white">Submit</p>
+        <button type="submit" className="bg-(--color-brand-purple) w-full h-full rounded-[20px] hover:bg-(--color-brand-purple-dark) cursor-pointer active:bg-fuchsia-800 transitionall duration-100">
+          <p className="font-normal text-white">{loading ? "Submitting" : "Submit"}</p>
         </button>
       </div>
 
