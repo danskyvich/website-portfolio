@@ -1,15 +1,37 @@
 import Input from "@/components/ui/input";
+import { useForm } from "react-hook-form";
+import { ContactMeData, ContactMeSchema } from "../schemas/contact-me-schema";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function ContactMeForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactMeData>({
+    resolver: zodResolver(ContactMeSchema),
+  })
+
+  const onSubmit = (data: ContactMeData) => {
+    // resend api 
+  }
+
+  const firstError = Object.values(errors)[0]?.message;
+
   return (
-    <div className="grid grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
+    <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10">
       {/* Your name */}
       <div className="flex font-mono border-b border-(--color-line)/50 p-3">
         <p>Your name</p>
       </div>
       <div className="flex border-x border-(--color-line)/50" />
       <div className="flex border-r border-b border-(--color-line)/50 py-0 text-[0.9rem]">
-        <Input type="text" placeholder="e.g Juan dela Cruz" />
+        <Input
+          type="text"
+          placeholder="e.g Juan dela Cruz"
+          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
+          {...register("name")}
+        />
       </div>
 
       {/* Your email */}
@@ -18,7 +40,12 @@ export default function ContactMeForm() {
       </div>
       <div className="flex row-start-2 border-x border-(--color-line)/50" />
       <div className="flex row-start-2 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
-        <Input type="email" placeholder="example@gmail.com" />
+        <Input
+          type="email"
+          placeholder="example@gmail.com"
+          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
+          {...register("email")}
+        />
       </div>
 
       {/* Your message */}
@@ -29,7 +56,8 @@ export default function ContactMeForm() {
       <div className="flex row-start-3 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
         <textarea
           placeholder="Hi! I would like to..."
-          className="bg-(--color-brand-blue-dark) rounded-[20px] py-3 w-full h-40 flex px-5 resize-none"
+          className="bg-(--color-brand-blue-dark) focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 rounded-[20px] py-3 w-full h-40 flex px-5 resize-none"
+          {...register("message")}
         />
       </div>
 
@@ -43,6 +71,6 @@ export default function ContactMeForm() {
       </div>
 
       <div className="flex row-start-5 col-span-3 w-full h-5 border-b border-(--color-line)/50" />
-    </div>
+    </form>
   );
 }

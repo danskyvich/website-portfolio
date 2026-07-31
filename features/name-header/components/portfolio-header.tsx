@@ -33,7 +33,7 @@ export default function PortfolioHeader({commits}: {commits: Commit | null}) {
       {latestCommit && (
         <div className="flex w-fit h-fit items-center p-1 gap-2 rounded-2xl text-[0.675rem] sm:text-[0.725rem] xl:text-[0.825rem] text-(--color-text-secondary) tracking-wide mx-5">
           <GitCommitHorizontal size={20}/>
-          <p>{latestCommit.repo}:{" "}</p>
+          <p className="whitespace-nowrap">{latestCommit.repo}:{" "}</p>
           <p className="line-clamp-1">{latestCommit?.message}</p>
         </div>
       )}
