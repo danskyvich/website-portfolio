@@ -11,9 +11,12 @@ interface MyWorkItemProps {
     title: string,
     description: string,
     techStack: ProjectInformation[]
+    githubButtonLink: string,
+    isDemoButtonDisabled: boolean
+    demoButtonLink?: string
 }
 
-export default function MyWorkItem({image, title, description, techStack}: MyWorkItemProps) {
+export default function MyWorkItem({image, title, description, techStack, githubButtonLink, isDemoButtonDisabled = true, demoButtonLink}: MyWorkItemProps) {
   return (
     <div className="grid grid-cols-1 grid-rows-1 xl:grid-cols-[1fr_1fr] w-full border-t border-(--color-line) mt-15">
       {/* left side */}
@@ -51,9 +54,15 @@ export default function MyWorkItem({image, title, description, techStack}: MyWor
             <Button
               text="View on Github"
               icon={<GithubIcon />}
-              link="https://github.com/danskyvich/money-tracker"
+              link={githubButtonLink}
             />
-            <Button text="View the demo" icon={<ArrowUpRight />} link="/" />
+            <Button 
+              text="View the demo" 
+              icon={<ArrowUpRight />} 
+              link={demoButtonLink ? demoButtonLink : "/"}
+              className={isDemoButtonDisabled ? "pointer-events-none" : ""}
+              isDisabled={isDemoButtonDisabled}
+            />
           </div>
           <div className="flex w-full border-y h-4 border-(--color-line) items-center justify-center" />
 

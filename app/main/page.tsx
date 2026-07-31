@@ -69,6 +69,8 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               description="A web application that monitors your monthly finances by recording your transactions and analyzing inflows and outflows"
               image="/first-project.png"
               techStack={firstProjectIcons}
+              isDemoButtonDisabled={true}
+              githubButtonLink="https://github.com/danskyvich/money-tracker"
             />
 
             <p className="absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
@@ -83,7 +85,11 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
 
           {/* About me */}
           <div className="flex relative flex-col w-full h-fit">
-            <SectionHeader title="About me" subtitle="A short description about me and my technical skills" id="about-me" />
+            <SectionHeader
+              title="About me"
+              subtitle="A short description about me and my technical skills"
+              id="about-me"
+            />
 
             <div className="grid grid-rows-1 h-fit mt-15 border-t border-(--color-line)">
               <div className="grid grid-cols-1 xl:grid-cols-[32%_20px_1fr] border-b border-(--color-line)">
@@ -179,7 +185,7 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               </p>
             </div>
 
-            <ContactMeForm/>
+            <ContactMeForm />
 
             <DoubleLineBorder className="-bottom-6" />
             <p className="absolute -left-16 z-50 bottom-13 rotate-270 font-mono text-(--color-brand-purple)">
