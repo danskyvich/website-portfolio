@@ -15,12 +15,23 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Danilo Pelin",
-  description: "Danilo Pelin's personal web portfolio",
-  icons: {
-    icon:"favicon.svg",
-    shortcut: "favicon.svg"
+export const metadata = {
+  title: "Danilo Pelin — Portfolio",
+  description:
+    "Software developer specializing in front-end development. Explore my projects and get in touch.",
+  openGraph: {
+    title: "Dan Ppelin — Portfolio",
+    description: "Software developer specializing in front-end development.",
+    url: "https://danppelin.vercel.app",
+    siteName: "Dan Ppelin Portfolio",
+    type: "website",
+    images: ["https://danppelin.vercel.app/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dan Pelin — Portfolio",
+    description: "Software developer specializing in front-end development.",
+    images: ["https://danppelin.vercel.app/og-image.png"],
   },
 };
 
