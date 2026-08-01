@@ -28,7 +28,9 @@ My web portfolio, showcasing my completed projects and a short section about me.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-![Logo](/public/favicon.png)
+## Logo
+
+![Logo](/public/favicon.svg)
 
 
 ## Lessons Learned
