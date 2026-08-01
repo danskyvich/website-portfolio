@@ -8,9 +8,15 @@ interface SendMessageToEmailProps {
     email: string,
     message: string,
     subject: string,
+    honeypot: string,
 }
 
-export async function SendMessageToEmail({email, subject, message}: SendMessageToEmailProps) {
+export async function SendMessageToEmail({email, subject, message, honeypot}: SendMessageToEmailProps) {
+
+    if (honeypot) {
+        return { success: true as const, data: null}
+    }
+    
     const { data, error } = await resend.emails.send({
         from: 'Guest <onboarding@resend.dev>',
         to: ['danilopelinjr@gmail.com'],

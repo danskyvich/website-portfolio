@@ -4,25 +4,24 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface ModalProps {
-  toggle: string | undefined;
+  toggleKey: number | undefined;
   header: string;
   message: string | undefined;
   icon: React.ReactNode;
 }
 
-export default function Modal({ toggle, message, header, icon }: ModalProps) {
+export default function Modal({ toggleKey, message, header, icon }: ModalProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
-    if (!toggle) return
-    setIsVisible(true)
+    if (toggleKey === undefined) return;
+    setIsVisible(true);
     const timer = setTimeout(() => setIsVisible(false), 4000);
     return () => clearTimeout(timer);
-  }, [toggle]);
-
+  }, [toggleKey]);
   return (
     <AnimatePresence>
-      {toggle && isVisible && (
+      {isVisible && (
         <motion.div 
         className="fixed flex flex-col z-50 bottom-5 right-10 bg-(--color-background) border-(--color-line) border-2 rounded-xl"
         initial={{ opacity: 0, x: 20}}
