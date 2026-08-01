@@ -3,6 +3,7 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/theme-provider";
 import TopBar from "@/components/layout/header";
+import {Analytics} from "@vercel/analytics/next"
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -38,9 +39,10 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className="flex flex-col w-full h-full min-h-full items-center">
+        <Analytics/>
         <ThemeProvider>
           <div className="flex flex-col w-full h-full">
-            <TopBar/>
+            <TopBar />
             {children}
           </div>
         </ThemeProvider>
