@@ -121,7 +121,7 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
                     </p>
                     <p className="h-fit w-full border-y border-(--color-line)/50 mt-5 justify-end text-center xl:text-end pr-1 py-5 xl:py-0 xl:pl-[10%]">
                       When I'm away from my laptop, you'll usually find me
-                      café-hopping around Manila, running around UP Diliman,
+                      café-hopping around Manila, checking out museums,
                       exploring new simulation games on Steam, or keeping up
                       with the latest tech events and framework releases through
                       forums and social media.
@@ -140,9 +140,9 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
                         curiousity
                       </span>{" "}
                       is not just crucial as a professional, but in general as
-                      well. I also believe that technology should always serve
-                      people, and that making it more accessible is essential in
-                      today's digital world.
+                      well. I believe good software should be simple,
+                      accessible, and built with the people using it in mind, and
+                      that's the kind of work I hope to keep creating.
                     </p>
                   </div>
 

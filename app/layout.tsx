@@ -16,11 +16,11 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Danilo Pelin — Portfolio",
+  title: "Danilo Pelin",
   description:
     "Software developer specializing in front-end development. Explore my projects and get in touch.",
   openGraph: {
-    title: "Danilo Pelin — Portfolio",
+    title: "Danilo Pelin",
     description: "Software developer specializing in front-end development.",
     url: "https://danppelin.vercel.app",
     siteName: "Danilo Pelin Portfolio",
@@ -29,7 +29,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Danilo Pelin — Portfolio",
+    title: "Danilo Pelin",
     description: "Software developer specializing in front-end development.",
     images: ["https://danppelin.vercel.app/og-image.png"],
   },
