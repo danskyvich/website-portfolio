@@ -1,5 +1,3 @@
-"use server"
-
 import { getLatestCommit } from "@/api/get-commits";
 import MainPortfolioPage from "./main/page";
 

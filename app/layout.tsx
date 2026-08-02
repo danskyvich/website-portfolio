@@ -15,12 +15,23 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Danilo Pelin",
-  description: "Danilo Pelin's personal web portfolio",
-  icons: {
-    icon:"favicon.svg",
-    shortcut: "favicon.svg"
+  description:
+    "Software developer specializing in front-end development. Explore my projects and get in touch.",
+  openGraph: {
+    title: "Danilo Pelin",
+    description: "Software developer specializing in front-end development.",
+    url: "https://danppelin.vercel.app",
+    siteName: "Danilo Pelin Portfolio",
+    type: "website",
+    images: ["https://danppelin.vercel.app/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Danilo Pelin",
+    description: "Software developer specializing in front-end development.",
+    images: ["https://danppelin.vercel.app/og-image.png"],
   },
 };
 
@@ -37,6 +48,9 @@ export default function RootLayout({
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Danilo Pelin"/>
+        <meta name="image" property="og:image" content="/og-image.png"/>
+        <meta name="title" property="og:title" content="Danilo Pelin's one-page portfolio"/>
       </head>
       <body className="flex flex-col w-full h-full min-h-full items-center">
         <Analytics/>
