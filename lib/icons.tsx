@@ -606,15 +606,14 @@ export const PHPIcon = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export const LinkedinIcon = ({width = 30, height = 28}:{width?:number,height?:number}) => {
+export const LinkedinIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 30 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="30" height="28" fill="url(#pattern0_135_109)" />
       <defs>
@@ -639,17 +638,16 @@ export const LinkedinIcon = ({width = 30, height = 28}:{width?:number,height?:nu
       </defs>
     </svg>
   );
-}
+};
 
-export const FacebookIcon = ({width = 30, height = 30}:{width?:number,height?:number}) => {
+export const FacebookIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="30" height="30" fill="url(#pattern0_135_115)" />
       <defs>
@@ -671,4 +669,4 @@ export const FacebookIcon = ({width = 30, height = 30}:{width?:number,height?:nu
       </defs>
     </svg>
   );
-}
+};
