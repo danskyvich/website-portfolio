@@ -18,17 +18,17 @@ export default function Footer() {
     {
       name: "Facebook",
       link: "https://web.facebook.com/danilo.pelin",
-      icon: <FacebookIcon width={20} height={20} />,
+      icon: <FacebookIcon className="w-full max-w-[16px] h-auto" />,
     },
     {
       name: "Github",
       link: "https://github.com/danskyvich",
-      icon: <GithubIcon />,
+      icon: <GithubIcon className="w-full max-w-[16px] h-auto"/>,
     },
     {
       name: "Linkedin",
       link: "https://www.linkedin.com/in/danilo-pelin-220313322/",
-      icon: <LinkedinIcon width={20} height={20} />,
+      icon: <LinkedinIcon className="w-[16px] max-w-[30px]"/>,
     },
   ];
   return (
