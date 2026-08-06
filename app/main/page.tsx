@@ -60,11 +60,11 @@ const firstProjectIcons = [
 export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
   return (
     <div className="flex flex-col w-full h-full overflow-x-hidden overflow-y-auto">
-      <div className="grid grid-cols-[10px_1fr_10px] md:grid-cols-[50px_1fr_50px] lg:grid-cols-[150px_1fr_150px] 2xl:grid-cols-[17.5%_1fr_17.5%] w-full h-full">
+      <div className="grid grid-cols-[0px_1fr_0px] md:grid-cols-[50px_1fr_50px] lg:grid-cols-[150px_1fr_150px] 2xl:grid-cols-[17.5%_1fr_17.5%] w-full h-full">
         <div />
 
         {/* Content goes here */}
-        <div className="flex flex-col w-full h-full border-x border-(--color-line)">
+        <div className="flex flex-col w-full h-full border-x border-(--color-line) min-w-0">
           {/* header */}
           <PortfolioHeader commits={commits} />
 
@@ -90,7 +90,7 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               githubButtonLink="https://github.com/danskyvich/money-tracker"
             />
 
-            <p className="absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
+            <p className="hidden md:block absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
               my works
             </p>
           </div>

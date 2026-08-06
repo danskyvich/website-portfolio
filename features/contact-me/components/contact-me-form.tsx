@@ -61,7 +61,7 @@ export default function ContactMeForm() {
       onSubmit={handleSubmit(onSubmit, (errors) => {
         console.log("Current errors:", errors);
       })}
-      className="grid grid-cols-[20%_10px_1fr] xl:grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10"
+      className="grid grid-cols-[20%_10px_1fr] xl:grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10 w-vw"
     >
       <Modal
         header={toast?.success ? "Message sent" : "Submission error"}
@@ -88,6 +88,7 @@ export default function ContactMeForm() {
         <Input
           id="website"
           type="text"
+          autocomplete="url"
           tabIndex={-1}
           placeholder="https://www.sample.com/..."
           className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 px-3 md:px-5 py-3"
@@ -107,6 +108,7 @@ export default function ContactMeForm() {
         <Input
           id="email"
           type="email"
+          autocomplete="email"
           placeholder="example@gmail.com"
           className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 text-[0.8rem] xl:text-[1rem] px-3 md:px-5"
           register={register}

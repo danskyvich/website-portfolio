@@ -22,7 +22,7 @@ import Link from "next/link";
 
 export default function TechStack() {
   return (
-    <div className="grid grid-cols-3 auto-rows-fr gap-x-5 mt-10 border-t border-(--color-line)">
+    <div className="grid grid-cols-3 auto-rows-fr gap-x-0 md:gap-x-3 xl:gap-x-5 mt-10 border-t border-(--color-line)">
       {/* header */}
       <div className="flex flex-col md:flex-row px-2 md:px-5 border border-(--color-brand-purple) gap-4 items-center justify-center py-3 bg-[#1E1128]">
         <Laptop size={40} className="w-[40%] md:w-[20%]" />
@@ -78,27 +78,27 @@ export default function TechStack() {
         </Link>
       </div>
       <div className="row-start-2 border-b border-l border-(--color-line)/50">
-        <div className="flex flex-col lg:flex-row w-full h-full gap-1 xl:gap-5 items-center justify-center">
+        <div className="flex flex-col lg:flex-row w-full h-full gap-2 xl:gap-5 items-center justify-center">
           <Link
             href="https://code.visualstudio.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <VSCodeIcon className="w-full max-w-[48px] h-auto"/>
+            <VSCodeIcon className="w-[35] max-w-[48px] h-auto"/>
           </Link>
           <Link
             href="https://inkscape.org/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <InkscapeIcon className="w-full max-w-[61px] h-auto"/>
+            <InkscapeIcon className="w-[40px] max-w-[61px] h-auto"/>
           </Link>
           <Link
             href="https://www.canva.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <CanvaIcon className="w-full max-w-[120px] h-auto"/>
+            <CanvaIcon className="w-[80px] max-w-[120px] h-auto"/>
           </Link>
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function TechStack() {
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <NextJSIcon className="w-full max-w-[107px] h-auto"/>
+            <NextJSIcon className="w-[80px] max-w-[107px] h-auto"/>
           </Link>
         </div>
       </div>
@@ -185,7 +185,7 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <VercelIcon className="w-full max-w-[150px] h-auto"/>
+          <VercelIcon className="w-[90px] max-w-[150px] h-auto"/>
         </Link>
       </div>
       <div className="row-start-5 border-r border-(--color-line)/50"></div>
