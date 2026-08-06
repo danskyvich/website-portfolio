@@ -17,7 +17,7 @@ export default function Input<T extends FieldValues = FieldValues>({id, tabIndex
         type={type}
         placeholder={placeholder}
         tabIndex={tabIndex}
-        className={`${className} bg-(--color-brand-blue-dark) rounded-[40px] w-full h-full flex px-5`}
+        className={`${className} bg-(--color-brand-blue-dark) rounded-[40px] w-full h-full flex`}
         {...(register && registerName ? register(registerName) : {})}
       />
     );

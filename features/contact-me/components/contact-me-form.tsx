@@ -61,7 +61,7 @@ export default function ContactMeForm() {
       onSubmit={handleSubmit(onSubmit, (errors) => {
         console.log("Current errors:", errors);
       })}
-      className="grid grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10"
+      className="grid grid-cols-[20%_10px_1fr] xl:grid-cols-[32.25%_20px_1fr] grid-rows-1 border-t border-(--color-line)/50 my-10"
     >
       <Modal
         header={toast?.success ? "Message sent" : "Submission error"}
@@ -74,12 +74,14 @@ export default function ContactMeForm() {
         header="Form error"
         toggleKey={errorKey}
         message={combinedError}
-        icon={<InfoIcon size={15}/>}
+        icon={<InfoIcon size={15} />}
       />
 
       {/* Honeypot */}
       <div className="hidden font-mono border-b border-(--color-line)/50 p-3">
-        <label htmlFor="website">Website</label>
+        <label htmlFor="website" className="text-[0.9rem] xl:text-xl">
+          Website
+        </label>
       </div>
       <div className="hidden border-x border-(--color-line)/50" />
       <div className="hidden flex-col border-r border-b border-(--color-line)/50 py-0 text-[0.9rem]">
@@ -88,7 +90,7 @@ export default function ContactMeForm() {
           type="text"
           tabIndex={-1}
           placeholder="https://www.sample.com/..."
-          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
+          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 px-3 md:px-5 py-3"
           register={register}
           registerName="honeypot"
         />
@@ -96,15 +98,17 @@ export default function ContactMeForm() {
 
       {/* Your email */}
       <div className="row-start-2 flex font-mono border-b border-(--color-line)/50 p-3">
-        <label htmlFor="email">Your email</label>
+        <label htmlFor="email" className="text-[0.85rem] xl:text-xl">
+          Your email
+        </label>
       </div>
       <div className="row-start-2 flex border-x border-(--color-line)/50" />
-      <div className="row-start-2 flex flex-col border-r border-b border-(--color-line)/50 py-0 text-[0.9rem]">
+      <div className="row-start-2 flex flex-col border-r border-b border-(--color-line)/50 py-0">
         <Input
           id="email"
           type="email"
           placeholder="example@gmail.com"
-          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
+          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 text-[0.8rem] xl:text-[1rem] px-3 md:px-5"
           register={register}
           registerName="email"
         />
@@ -112,7 +116,9 @@ export default function ContactMeForm() {
 
       {/* Your subject */}
       <div className="flex row-start-3 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5">
-        <label htmlFor="subject">Your subject</label>
+        <label htmlFor="subject" className="text-[0.85rem] xl:text-xl">
+          Your subject
+        </label>
       </div>
       <div className="flex row-start-3 border-x border-(--color-line)/50" />
       <div className="flex row-start-3 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
@@ -120,7 +126,7 @@ export default function ContactMeForm() {
           id="subject"
           type="text"
           placeholder="Re: project inquiry"
-          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2"
+          className="focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 text-[0.7rem] md:text-[0.875rem] lg:text-[0.95rem] xl:text-[1rem] px-3 md:px-5 py-3"
           register={register}
           registerName="subject"
         />
@@ -128,14 +134,16 @@ export default function ContactMeForm() {
 
       {/* Your message */}
       <div className="flex row-start-4 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-[calc(100%-20px)] items-center">
-        <label htmlFor="message">Your message</label>
+        <label htmlFor="message" className="text-[0.85rem] xl:text-xl">
+          Your message
+        </label>
       </div>
       <div className="flex row-start-4 border-x border-(--color-line)/50" />
       <div className="flex row-start-4 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
         <textarea
           id="message"
           placeholder="Hi! I would like to..."
-          className="bg-(--color-brand-blue-dark) focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 rounded-[20px] py-3 w-full h-40 flex px-5 resize-none"
+          className="bg-(--color-brand-blue-dark) focus:outline-(--color-brand-blue-accent)/75 focus:outline-2 rounded-[20px] py-3 w-full h-40 flex px-3 md:px-5 resize-none text-[0.7rem] md:text-[0.875rem] lg:text-[0.95rem] xl:text-[1rem]"
           {...register("message")}
         />
       </div>
@@ -143,10 +151,10 @@ export default function ContactMeForm() {
       {/* Submit */}
       <div className="flex row-start-5 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-10 items-center" />
       <div className="flex row-start-5 border-x border-b border-(--color-line)/50" />
-      <div className="flex row-start-5 border-r border-b border-(--color-line)/50 py-0 text-[0.9rem] mt-5 border-t">
+      <div className="flex row-start-5 border-r border-b border-(--color-line)/50 text-[0.7rem] md:text-[0.9rem] mt-5 border-t">
         <button
           type="submit"
-          className="bg-(--color-brand-purple) w-full h-full rounded-[20px] hover:bg-(--color-brand-purple-dark) cursor-pointer active:bg-fuchsia-800 transitionall duration-100"
+          className="bg-(--color-brand-purple) w-full h-full rounded-[20px] hover:bg-(--color-brand-purple-dark) cursor-pointer active:bg-fuchsia-800 transition-all duration-100"
         >
           <p className="font-normal text-white">
             {loading ? "Submitting" : "Submit"}

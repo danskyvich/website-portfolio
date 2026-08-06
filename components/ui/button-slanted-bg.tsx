@@ -32,7 +32,7 @@ export default function ButtonSlantedBg({
 
   return (
     <motion.a
-      className="relative flex overflow-hidden border border-(--color-line) cursor-pointer px-5 py-2 text-[0.9rem] bg-[repeating-linear-gradient(315deg,var(--color-line)_0,var(--color-line)_1px,transparent_1px,transparent_50%)] bg-size-[8px_8px]"
+      className="relative flex overflow-hidden border border-(--color-line) cursor-pointer px-2 md:px-3 lg:px-4 xl:px-5 py-2 text-[0.7rem] md:text-[0.8rem] lg:text-[0.85rem] xl:text-[0.9rem] bg-[repeating-linear-gradient(315deg,var(--color-line)_0,var(--color-line)_1px,transparent_1px,transparent_50%)] bg-size-[8px_8px]"
       href={link}
       download={isDownload ? "" : undefined}
       initial="rest"

@@ -51,6 +51,7 @@ export default function RootLayout({
         <meta name="author" content="Danilo Pelin"/>
         <meta name="image" property="og:image" content="/og-image.png"/>
         <meta name="title" property="og:title" content="Danilo Pelin's one-page portfolio"/>
+        <
       </head>
       <body className="flex flex-col w-full h-full min-h-full items-center">
         <Analytics/>

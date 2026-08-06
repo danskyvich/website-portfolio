@@ -22,31 +22,37 @@ import Link from "next/link";
 
 export default function TechStack() {
   return (
-    <div className="grid grid-cols-3 grid-rows-5 gap-x-5 mt-10 border-t border-(--color-line)">
+    <div className="grid grid-cols-3 auto-rows-fr gap-x-5 mt-10 border-t border-(--color-line)">
       {/* header */}
-      <div className="flex flex-col md:flex-row px-5 border border-(--color-brand-purple) gap-4 items-center justify-center py-3 bg-[#1E1128]">
+      <div className="flex flex-col md:flex-row px-2 md:px-5 border border-(--color-brand-purple) gap-4 items-center justify-center py-3 bg-[#1E1128]">
         <Laptop size={40} className="w-[40%] md:w-[20%]" />
-        <div className="w-full h-full gap-2">
-          <p className="font-mono font-medium text-xl">Frontend</p>
-          <p className="text-[0.7rem] md:text-[0.9rem] w-[80%] font-mono text-(--color-text-secondary)">
+        <div className="flex flex-col w-full h-full lg:gap-2">
+          <p className="flex font-mono font-medium text-[0.8rem] md:text-[1rem] xl:text-xl">
+            Frontend
+          </p>
+          <p className="flex xl:justify-start text-[0.7rem] md:text-[0.85rem] w-[80%] font-mono text-(--color-text-secondary)">
             UI/UX Design, client-side development, etc.
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row px-5 border border-(--color-brand-blue-accent) gap-4 items-center justify-center py-3 bg-[#202137]">
+      <div className="flex flex-col md:flex-row px-2 md:px-5 border border-(--color-brand-blue-accent) gap-4 items-center justify-center py-3 bg-[#202137]">
         <Database size={40} className="w-[40%] md:w-[20%]" />
-        <div className="w-full h-full gap-2">
-          <p className="font-mono font-medium text-xl">Backend</p>
-          <p className="text-[0.9rem] w-[60%] font-mono text-(--color-text-secondary)">
+        <div className="flex flex-col w-full h-full lg:gap-2">
+          <p className="font-mono font-medium text-[0.8rem] md:text-[1rem] xl:text-xl">
+            Backend
+          </p>
+          <p className="text-[0.7rem] md:text-[0.85rem] w-[60%] font-mono text-(--color-text-secondary)">
             Database management SSR, etc.
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row px-5 border border-[#00D9FF] gap-4 items-center justify-center py-3 bg-[#092D3A]">
+      <div className="flex flex-col md:flex-row px-2 md:px-5 border border-[#00D9FF] gap-4 items-center justify-center py-3 bg-[#092D3A]">
         <Toolbox size={40} className="w-[40%] md:w-[20%]" />
-        <div className="w-full h-full gap-2">
-          <p className="font-mono font-medium text-xl">Tools</p>
-          <p className="text-[0.9rem] w-[60%] font-mono text-(--color-text-secondary)">
+        <div className="flex flex-col w-full h-full lg:gap-2">
+          <p className="flex font-mono font-medium text-[0.8rem] md:text-[1rem] xl:text-xl">
+            Tools
+          </p>
+          <p className="flex text-[0.7rem] md:text-[0.85rem] lg:w-[60%] font-mono text-(--color-text-secondary)">
             IDE’s, Software, Frameworks, etc.
           </p>
         </div>
@@ -59,7 +65,7 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <TailwindCSSIcon width={170} height={30}/>
+          <TailwindCSSIcon className="w-full max-w-[170px] h-auto" />
         </Link>
       </div>
       <div className="row-start-2 border-b border-x border-(--color-line)/50 items-center justify-center flex">
@@ -68,7 +74,7 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <SupabaseIcon width={160} height={30}/>
+          <SupabaseIcon width={160} height={30} className="w-full max-w-[160px] h-auto"/>
         </Link>
       </div>
       <div className="row-start-2 border-b border-l border-(--color-line)/50">
@@ -78,39 +84,39 @@ export default function TechStack() {
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <VSCodeIcon />
+            <VSCodeIcon className="w-full max-w-[48px] h-auto"/>
           </Link>
           <Link
             href="https://inkscape.org/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <InkscapeIcon />
+            <InkscapeIcon className="w-full max-w-[61px] h-auto"/>
           </Link>
           <Link
             href="https://www.canva.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <CanvaIcon />
+            <CanvaIcon className="w-full max-w-[120px] h-auto"/>
           </Link>
         </div>
       </div>
       <div className="row-start-3 border-b border-r border-(--color-line)/50">
-        <div className="flex w-full h-full items-center justify-center">
+        <div className="flex flex-col xl:flex-row gap-4 w-full h-full items-center justify-center">
           <Link
             href="https://developer.mozilla.org/en-US/docs/Web/HTML"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <HTMLWeb3Icon />
+            <HTMLWeb3Icon className="w-full max-w-[70px] h-auto"/>
           </Link>
           <Link
             href="https://developer.mozilla.org/en-US/docs/Web/CSS"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <CSSIcon />
+            <CSSIcon className="w-full max-w-[51px] h-auto"/>
           </Link>
         </div>
       </div>
@@ -121,14 +127,14 @@ export default function TechStack() {
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <PostgrestSQL />
+            <PostgrestSQL className="w-full max-w-[51px] h-auto"/>
           </Link>
           <Link
             href="https://www.mysql.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <MySQLIcon />
+            <MySQLIcon className="w-full max-w-[81px] h-auto"/>
           </Link>
         </div>
       </div>
@@ -139,38 +145,38 @@ export default function TechStack() {
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <ViteIcon />
+            <ViteIcon className="w-full max-w-[61px] h-auto" />
           </Link>
           <Link
             href="https://nextjs.org/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <NextJSIcon />
+            <NextJSIcon className="w-full max-w-[107px] h-auto"/>
           </Link>
         </div>
       </div>
       <div className="row-start-4 border-b border-r border-(--color-line)/50">
-        <div className="flex w-full h-full items-center justify-center gap-5">
+        <div className="flex flex-col xl:flex-row gap-3 w-full h-full items-center justify-center xl:gap-5">
           <Link
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <JavascriptIcon />
+            <JavascriptIcon className="w-full max-w-[49px] h-auto"/>
           </Link>
           <Link
             href="https://www.typescriptlang.org"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <TypescriptIcon />
+            <TypescriptIcon className="w-full max-w-[51px] h-auto"/>
           </Link>
         </div>
       </div>
       <div className="flex row-start-4 border-b border-x border-(--color-line)/50 items-center justify-center">
         <Link href="https://www.php.net/">
-          <PHPIcon />
+          <PHPIcon className="w-full max-w-[86px] h-auto"/>
         </Link>
       </div>
       <div className="flex row-start-4 border-b border-l border-(--color-line)/50 items-center justify-center">
@@ -179,7 +185,7 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <VercelIcon width={150} height={35}/>
+          <VercelIcon className="w-full max-w-[150px] h-auto"/>
         </Link>
       </div>
       <div className="row-start-5 border-r border-(--color-line)/50"></div>
@@ -191,14 +197,14 @@ export default function TechStack() {
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <GithubIcon width={49} height={49}/>
+            <GithubIcon className="w-full max-w-[49px] h-auto"/>
           </Link>
           <Link
             href="https://git-scm.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <GitIcon />
+            <GitIcon className="w-full max-w-[43px] h-auto"/>
           </Link>
         </div>
       </div>

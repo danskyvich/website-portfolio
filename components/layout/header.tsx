@@ -8,9 +8,9 @@ import Link from "next/link";
 export default function TopBar() {
 
     return (
-      <div className="fixed flex z-50 w-full h-fit border-b border-(--color-line) px-10 2xl:px-[20%] py-3 bg-(--color-background)/50 backdrop-blur-xl items-center justify-between">
+      <div className="fixed flex z-50 w-full h-fit border-b border-(--color-line) px-3 sm:px-5 md:px-7 lg:px-9 xl:px-10 2xl:px-[20%] py-3 bg-(--color-background)/50 backdrop-blur-xl items-center justify-between">
         {/* Left side */}
-        <div className="flex w-full h-full gap-3 xl:gap-5 2xl:gap-10 text-[0.9rem] items-center font-">
+        <div className="flex w-full h-full gap-3 xl:gap-5 2xl:gap-10 text-[0.7rem] sm:text-[0.75rem] md:text-[0.85rem] lg:text-[0.875rem] xl:text-[0.9rem] items-center">
           <Image
             src="favicon.svg"
             alt="alt"

@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 export default function LoopingText({className}:{className: string}) {
     return (
       <motion.div
-        className={`${className} absolute left-1/2 -translate-x-1/2 w-dvw h-fit whitespace-nowrap text-[1rem] font-mono`}
+        className={`${className} text-[0.7rem] sm:text-[0.8rem] md:text-[0.9rem] lg:text-[0.95rem] absolute left-1/2 -translate-x-1/2 w-dvw h-fit whitespace-nowrap xl:text-[1rem] font-mono`}
         animate={{ x: ["0%", "-50%"] }}
         transition={{
           repeat: Infinity,
