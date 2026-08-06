@@ -22,7 +22,7 @@ export default function SectionHeader({
       </div>
       <div className="w-full h-fit border-y border-(--color-line)/30 mt-5">
         {subtitle && (
-          <p className="text-(--color-text-secondary) w-[70%] sm:w-[50%] px-3 py-1 font-sans text-[0.775rem] md:text-[0.95rem] lg:text-[1rem]">
+          <p className="text-(--color-text-secondary) w-[70%] sm:w-[50%] px-3 py-1 font-sans text-[1rem]">
             {subtitle}
           </p>
         )}

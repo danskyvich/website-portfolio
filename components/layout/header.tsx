@@ -12,7 +12,7 @@ export default function TopBar() {
         {/* Left side */}
         <div className="flex w-full h-full gap-3 xl:gap-5 2xl:gap-10 text-[0.7rem] sm:text-[0.75rem] md:text-[0.85rem] lg:text-[0.875rem] xl:text-[0.9rem] items-center">
           <Image
-            src="favicon.svg"
+            src="icon.svg"
             alt="alt"
             width={45}
             height={45}

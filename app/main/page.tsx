@@ -77,7 +77,7 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
           <div className="flex relative flex-col w-full h-fit">
             <SectionHeader
               title="My works"
-              subtitle="My finished projects, either academic or personal, that I compiled for the last four years."
+              subtitle="My dynamic, ever-changing list of projects and works"
               id="my-works"
             />
 
