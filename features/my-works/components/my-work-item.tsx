@@ -36,13 +36,13 @@ export default function MyWorkItem({image, title, description, techStack, github
       <div className="flex flex-col w-full border-l border-(--color-line) h-full text-end">
         <div className="flex flex-col w-full">
           {/* Title */}
-          <p className="w-full font-bold py-3 xl:py-0 text-center xl:text-end font-mono text-3xl pr-3 border-b border-(--color-line)/30">
+          <p className="w-full font-bold py-3 xl:py-0 text-center xl:text-end font-mono text-xl md:text-2xl xl:text-3xl pr-3 border-b border-(--color-line)/30">
             {title}
           </p>
 
           {/* Subtitle */}
           <div className="flex w-full h-fit">
-            <p className="flex h-fit text-center xl:text-end px-[20%] xl:px-[30%_5] text-(--color-text-secondary) py-3 xl:py-0">
+            <p className="flex h-fit text-center xl:text-end px-[5%] py-5 xl:px-[30%_5] text-(--color-text-secondary) text-[1rem] xl:py-0">
               {description}
             </p>
           </div>
@@ -50,10 +50,10 @@ export default function MyWorkItem({image, title, description, techStack, github
 
         <div className="flex flex-col w-full h-full">
           <div className="flex w-full border-y h-4 border-(--color-line)" />
-          <div className="flex w-full h-fit py-2">
+          <div className="flex items-center justify-center flex-col gap-2 xl:gap-4 md:flex-row w-full h-fit py-2">
             <Button
               text="View on Github"
-              icon={<GithubIcon />}
+              icon={<GithubIcon className="w-[20px] max-w-[49px] h-auto"/>}
               link={githubButtonLink}
             />
             <Button 
@@ -71,7 +71,7 @@ export default function MyWorkItem({image, title, description, techStack, github
           <DoubleLineBorder className="-bottom-6" />
         </div>
       </div>
-      <p className="absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
+      <p className="hidden md:block absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
         my works
       </p>
     </div>

@@ -8,7 +8,7 @@ export default function PortfolioHeader({commits}: {commits: Commit | null}) {
   return (
     <div className="flex relative flex-col w-full h-150 justify-end">
       <div className="flex w-full h-fit items-end pb-1">
-        <p className="font-mono md:text-start lg:text-xl xl:text-2xl/10 font-extralight w-[70%] ml-5">
+        <p className="font-mono text-[1rem] md:text-start lg:text-xl xl:text-2xl/10 font-extralight w-full sm:w-[60%] md:w-[70%] ml-2 lg:ml-5">
           I'm
           <br />
           <span className="text-6xl font-semibold bg-clip-text text-transparent bg-linear-to-r from-(--color-brand-blue) to-(--color-brand-purple)">
@@ -31,8 +31,8 @@ export default function PortfolioHeader({commits}: {commits: Commit | null}) {
         </p>
       </div>
       {latestCommit && (
-        <div className="flex w-fit h-fit items-center p-1 gap-2 rounded-2xl text-[0.675rem] sm:text-[0.725rem] xl:text-[0.825rem] text-(--color-text-secondary) tracking-wide mx-5">
-          <GitCommitHorizontal size={20}/>
+        <div className="flex w-fit h-fit items-center p-1 gap-2 rounded-2xl text-[0.95rem] text-(--color-text-secondary) tracking-wide mx-0 lg:mx-5">
+          <GitCommitHorizontal size={20} className="min-w-5 h-5 w-fit"/>
           <p className="whitespace-nowrap">{latestCommit.repo}:{" "}</p>
           <p className="line-clamp-1">{latestCommit?.message}</p>
         </div>

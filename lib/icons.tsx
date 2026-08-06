@@ -1,9 +1,10 @@
-export const GithubIcon = ({width=16, height=16}:{width?:number, height?:number}) => {
+import { SVGProps } from "react";
+
+export const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
+      {...props}
       fill="currentColor"
       viewBox="0 0 16 16"
     >
@@ -12,21 +13,14 @@ export const GithubIcon = ({width=16, height=16}:{width?:number, height?:number}
   );
 };
 
-export const JavascriptIcon = ({
-  width = 51,
-  height = 51,
-}: {
-  width?: number;
-  height?: number;
-}) => {
+export const JavascriptIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 49 49"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="49" height="49" fill="url(#pattern0_33_114)" />
       <defs>
@@ -50,15 +44,14 @@ export const JavascriptIcon = ({
   );
 };
 
-export const TypescriptIcon = ({width = 51, height = 51}:{width?: number, height?:number}) => {
+export const TypescriptIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 51 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="51" height="51" fill="url(#pattern0_13_1211)" />
       <defs>
@@ -80,22 +73,15 @@ export const TypescriptIcon = ({width = 51, height = 51}:{width?: number, height
       </defs>
     </svg>
   );
-}
+};
 
-export const TailwindCSSIcon = ({
-  width = 150,
-  height = 17
-}: {
-  width?: number;
-  height?:number;
-}) => {
+export const TailwindCSSIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 136 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_13_1216)">
         <path
@@ -120,15 +106,14 @@ export const TailwindCSSIcon = ({
   );
 };
 
-export const SupabaseIcon = ({width = 115, height = 22}:{width?:number, height?:number}) => {
+export const SupabaseIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 115 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="115" height="22" fill="url(#pattern0_13_1219)" />
       <defs>
@@ -153,17 +138,16 @@ export const SupabaseIcon = ({width = 115, height = 22}:{width?:number, height?:
       </defs>
     </svg>
   );
-}
+};
 
-export const HTMLWeb3Icon  = ({width = 70, height = 70}:{width?:number,height?:number}) => {
+export const HTMLWeb3Icon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 70 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="70" height="70" fill="url(#pattern0_13_1229)" />
       <defs>
@@ -185,16 +169,15 @@ export const HTMLWeb3Icon  = ({width = 70, height = 70}:{width?:number,height?:n
       </defs>
     </svg>
   );
-}
+};
 
-export const CSSIcon = ({width=51, height=51}:{width?:number,height?:number}) => {
+export const CSSIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 51 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_13_1230)">
         <path
@@ -213,16 +196,15 @@ export const CSSIcon = ({width=51, height=51}:{width?:number,height?:number}) =>
       </defs>
     </svg>
   );
-}
+};
 
-export const NextJSIcon = ({width=107,height=21}:{width?:number,height?:number}) => {
+export const NextJSIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 107 21"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_13_1242)">
         <path
@@ -267,16 +249,15 @@ export const NextJSIcon = ({width=107,height=21}:{width?:number,height?:number})
       </defs>
     </svg>
   );
-}
+};
 
-export const VercelIcon = ({width=113, height=22} : {width?:number, height?:number}) => {
+export const VercelIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 113 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_13_1255)">
         <path
@@ -293,17 +274,16 @@ export const VercelIcon = ({width=113, height=22} : {width?:number, height?:numb
       </defs>
     </svg>
   );
-}
+};
 
-export const VSCodeIcon = ({width = 48, height = 48}:{width?: number, height?:number}) => {
+export const VSCodeIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="48" height="48" fill="url(#pattern0_13_1261)" />
       <defs>
@@ -325,17 +305,16 @@ export const VSCodeIcon = ({width = 48, height = 48}:{width?: number, height?:nu
       </defs>
     </svg>
   );
-}
+};
 
-export const PostgrestSQL = ({width = 51, height = 53}:{width?:number,height?:number}) => {
+export const PostgrestSQL = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 51 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="51" height="53" fill="url(#pattern0_28_1651)" />
       <defs>
@@ -360,17 +339,16 @@ export const PostgrestSQL = ({width = 51, height = 53}:{width?:number,height?:nu
       </defs>
     </svg>
   );
-}
+};
 
-export const MySQLIcon = ({width = 81,height = 42}:{width?:number,height?:number}) => {
+export const MySQLIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 81 42"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="81" height="42" fill="url(#pattern0_28_1653)" />
       <defs>
@@ -395,17 +373,16 @@ export const MySQLIcon = ({width = 81,height = 42}:{width?:number,height?:number
       </defs>
     </svg>
   );
-}
+};
 
-export const InkscapeIcon = ({width = 61,height = 61}:{width?:number,height?:number}) => {
+export const InkscapeIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 61 61"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="61" height="61" fill="url(#pattern0_30_1739)" />
       <defs>
@@ -427,17 +404,16 @@ export const InkscapeIcon = ({width = 61,height = 61}:{width?:number,height?:num
       </defs>
     </svg>
   );
-}
+};
 
-export const CanvaIcon = ({width = 120,height = 45}:{width?:number,height?:number}) => {
+export const CanvaIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 120 45"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="120" height="45" fill="url(#pattern0_30_1742)" />
       <defs>
@@ -462,17 +438,16 @@ export const CanvaIcon = ({width = 120,height = 45}:{width?:number,height?:numbe
       </defs>
     </svg>
   );
-}
+};
 
-export const ViteIcon = ({width = 61,height = 37}:{width?:number,height?:number}) => {
+export const ViteIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 61 37"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      {...props}
     >
       <rect width="61" height="37" fill="url(#pattern0_28_1655)" />
       <defs>
@@ -497,16 +472,15 @@ export const ViteIcon = ({width = 61,height = 37}:{width?:number,height?:number}
       </defs>
     </svg>
   );
-}
+};
 
-export const GitIcon = ({width = 43,height = 43}:{width?:number,height?:number}) => {
+export const GitIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 43 43"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_29_1699)">
         <path
@@ -521,16 +495,15 @@ export const GitIcon = ({width = 43,height = 43}:{width?:number,height?:number})
       </defs>
     </svg>
   );
-}
+};
 
-export const PHPIcon = ({width = 86,height = 47}:{width?:number,height?:number}) => {
+export const PHPIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 86 47"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_30_1701)">
         <mask
@@ -631,7 +604,7 @@ export const PHPIcon = ({width = 86,height = 47}:{width?:number,height?:number})
       </defs>
     </svg>
   );
-}
+};
 
 export const LinkedinIcon = ({width = 30, height = 28}:{width?:number,height?:number}) => {
   return (

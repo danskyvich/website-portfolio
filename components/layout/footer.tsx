@@ -33,23 +33,27 @@ export default function Footer() {
   ];
   return (
     <div className="flex relative w-full h-80 justify-end mt-6 gap-x-5">
-      <div className="grid grid-cols-[34%_1fr_1fr] grid-rows-1 w-full h-full">
-        <div className="flex flex-col border-r border-(--color-line)/50 mr-5 px-2 py-10 gap-6">
-          <p className="text-[0.9rem] font-semibold">Danilo Pelin Jr.</p>
+      <div className="grid grid-cols-[35%_1fr_1fr] grid-rows-1 w-full h-full">
+        <div className="flex flex-col border-r border-(--color-line)/50 mr-1 sm:mr-3 md:mr-5 px-2 py-10 gap-6">
+          <p className="text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem] font-semibold">
+            Danilo Pelin Jr.
+          </p>
           {personal.map((item, key) => (
             <div
               className="flex w-full h-fit items-center gap-3 text-[0.9rem] text-(--color-text-primary)"
               key={key}
             >
-              {item.icon}
-              <p className="flex text-[0.9rem] line-clamp-1 whitespace-nowrap">
+              <div className="hidden md:block">{item.icon}</div>
+              <p className="flex text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem] line-clamp-1 whitespace-nowrap">
                 {item.name}
               </p>
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-6 border-x border-(--color-line)/50 px-2 pt-10 text-[0.9rem]">
-          <p className="font-bold">This page</p>
+        <div className="flex flex-col gap-6 border-x border-(--color-line)/50 px-2 pt-10 text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem]">
+          <p className="font-bold text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem]">
+            This page
+          </p>
           {links.map((item, key) => (
             <a
               href={item.link}
@@ -60,24 +64,28 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <div className="flex flex-col gap-6 text-[0.9rem] border-l border-(--color-line)/50 ml-5 px-2 pt-10">
-          <p className="row-start-1 col-span-2 font-bold">Socials</p>
+        <div className="flex flex-col gap-6 text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem] border-l border-(--color-line)/50 ml-1 sm:ml-3 md:ml-5 px-2 pt-10">
+          <p className="row-start-1 col-span-2 font-bold text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem]">
+            Socials
+          </p>
           {socials.map((item, key) => (
-            <div className="flex w-full h-fit" key={key}>
-              <div className="flex w-[10%]">{item.icon}</div>
+            <div className="flex w-full h-fit md:gap-2" key={key}>
+              <div className="w-[10%] hidden md:block">{item.icon}</div>
               <a
                 href={item.link}
                 className="hover:underline text-[0.9rem] font-light"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <p className="line-clamp-1 whitespace-nowrap">{item.name}</p>
+                <p className="line-clamp-1 whitespace-nowrap text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem]">
+                  {item.name}
+                </p>
               </a>
             </div>
           ))}
         </div>
       </div>
-      <p className="absolute font-mono text-[0.9rem] text-(--color-brand-purple) bottom-7 -left-10 rotate-270">
+      <p className="hidden md:block absolute font-mono text-[0.9rem] text-(--color-brand-purple) bottom-7 -left-10 rotate-270">
         footer
       </p>
     </div>
