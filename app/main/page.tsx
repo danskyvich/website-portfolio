@@ -90,7 +90,8 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               githubButtonLink="https://github.com/danskyvich/money-tracker"
               tag1="Fullstack"
               tag2="UI/UX"
-              tag3="Render"
+              tag3="Web application"
+              tag4="PostgrestSQL"
             />
 
             <p className="hidden md:block absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
