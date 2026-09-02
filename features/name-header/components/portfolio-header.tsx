@@ -31,10 +31,11 @@ export default function PortfolioHeader({commits}: {commits: Commit | null}) {
         </p>
       </div>
       {latestCommit && (
-        <div className="flex w-full h-fit items-center p-1 gap-2 rounded-2xl text-[0.9rem] font-mono text-(--color-text-secondary) tracking-wide mx-0 lg:mx-5 min-w-0">
-          <GitCommitHorizontal size={20} className="min-w-5 h-5 w-fit shrink-0"/>
-          <p className="whitespace-nowrap shrink-0">{latestCommit.repo}:{" "}</p>
-          <p className="line-clamp-1 min-w-0 shrink-0">{latestCommit?.message}</p>
+        <div className="flex w-full items-center p-1 gap-2 rounded-2xl text-[0.9rem] font-mono text-(--color-text-secondary) tracking-wide mx-0 lg:mx-5 min-w-0 overflow-hidden">
+          <GitCommitHorizontal size={20} className="shrink-0 mt-0.5 min-w-3" />
+          <p className="min-w-0 wrap-break-word text-[0.8rem] md:text-[0.85rem] lg:text-[0.9rem]">
+            {latestCommit.repo}: {latestCommit?.message}
+          </p>
         </div>
       )}
 
