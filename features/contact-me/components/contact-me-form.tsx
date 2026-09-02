@@ -79,7 +79,10 @@ export default function ContactMeForm() {
 
       {/* Honeypot */}
       <div className="hidden font-mono border-b border-(--color-line)/50 p-3">
-        <label htmlFor="website" className="text-[0.9rem] xl:text-xl">
+        <label
+          htmlFor="website"
+          className="text-[0.7rem] md:text-[0.8rem] xl:text-xl"
+        >
           Website
         </label>
       </div>
@@ -99,7 +102,10 @@ export default function ContactMeForm() {
 
       {/* Your email */}
       <div className="row-start-2 flex font-mono border-b border-(--color-line)/50 p-3">
-        <label htmlFor="email" className="text-[0.85rem] xl:text-xl">
+        <label
+          htmlFor="email"
+          className="text-[0.7rem] md:text-[0.8rem] xl:text-xl"
+        >
           Your email
         </label>
       </div>
@@ -118,7 +124,10 @@ export default function ContactMeForm() {
 
       {/* Your subject */}
       <div className="flex row-start-3 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5">
-        <label htmlFor="subject" className="text-[0.85rem] xl:text-xl">
+        <label
+          htmlFor="subject"
+          className="text-[0.7rem] md:text-[0.8rem] xl:text-xl"
+        >
           Your subject
         </label>
       </div>
@@ -136,7 +145,10 @@ export default function ContactMeForm() {
 
       {/* Your message */}
       <div className="flex row-start-4 font-mono border-b border-t border-(--color-line)/50 p-3 mt-5 h-[calc(100%-20px)] items-center">
-        <label htmlFor="message" className="text-[0.85rem] xl:text-xl">
+        <label
+          htmlFor="message"
+          className="text-[0.7rem] md:text-[0.8rem] xl:text-xl"
+        >
           Your message
         </label>
       </div>

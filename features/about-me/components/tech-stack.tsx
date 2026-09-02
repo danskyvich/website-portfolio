@@ -74,72 +74,76 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <SupabaseIcon width={160} height={30} className="w-full max-w-[160px] h-auto"/>
+          <SupabaseIcon
+            width={160}
+            height={30}
+            className="w-full max-w-[160px] h-auto"
+          />
         </Link>
       </div>
       <div className="row-start-2 border-b border-l border-(--color-line)/50">
-        <div className="flex flex-col lg:flex-row w-full h-full gap-2 xl:gap-5 items-center justify-center">
+        <div className="flex flex-col sm:flex-row w-full h-full gap-2 xl:gap-5 items-center justify-center">
           <Link
             href="https://code.visualstudio.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <VSCodeIcon className="w-[35] max-w-[48px] h-auto"/>
+            <VSCodeIcon className="w-[35] max-w-[48px] h-auto" />
           </Link>
           <Link
             href="https://inkscape.org/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <InkscapeIcon className="w-[40px] max-w-[61px] h-auto"/>
+            <InkscapeIcon className="w-[40px] max-w-[61px] h-auto" />
           </Link>
           <Link
             href="https://www.canva.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <CanvaIcon className="w-[80px] max-w-[120px] h-auto"/>
+            <CanvaIcon className="w-[80px] max-w-[120px] h-auto" />
           </Link>
         </div>
       </div>
       <div className="row-start-3 border-b border-r border-(--color-line)/50">
-        <div className="flex flex-col xl:flex-row gap-4 w-full h-full items-center justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 w-full h-full items-center justify-center">
           <Link
             href="https://developer.mozilla.org/en-US/docs/Web/HTML"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <HTMLWeb3Icon className="w-full max-w-[70px] h-auto"/>
+            <HTMLWeb3Icon className="w-full max-w-[70px] h-auto" />
           </Link>
           <Link
             href="https://developer.mozilla.org/en-US/docs/Web/CSS"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <CSSIcon className="w-full max-w-[51px] h-auto"/>
+            <CSSIcon className="w-full max-w-[51px] h-auto" />
           </Link>
         </div>
       </div>
       <div className="row-start-3 border-x border-b border-(--color-line)/50">
-        <div className="flex flex-col lg:flex-row w-full h-full gap-5 items-center justify-center">
+        <div className="flex flex-col sm:flex-row w-full h-full gap-5 items-center justify-center">
           <Link
             href="https://www.postgresql.org/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <PostgrestSQL className="w-full max-w-[51px] h-auto"/>
+            <PostgrestSQL className="w-full max-w-[51px] h-auto" />
           </Link>
           <Link
             href="https://www.mysql.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <MySQLIcon className="w-full max-w-[81px] h-auto"/>
+            <MySQLIcon className="w-full max-w-[81px] h-auto" />
           </Link>
         </div>
       </div>
       <div className="row-start-3 border-b border-l border-(--color-line)/50">
-        <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center gap-5">
+        <div className="flex flex-col sm:flex-row w-full h-full items-center justify-center gap-5">
           <Link
             href="https://vite.dev/"
             rel="noreferrer noopenner"
@@ -152,31 +156,31 @@ export default function TechStack() {
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <NextJSIcon className="w-[80px] max-w-[107px] h-auto"/>
+            <NextJSIcon className="w-[80px] max-w-[107px] h-auto" />
           </Link>
         </div>
       </div>
       <div className="row-start-4 border-b border-r border-(--color-line)/50">
-        <div className="flex flex-col xl:flex-row gap-3 w-full h-full items-center justify-center xl:gap-5">
+        <div className="flex flex-col sm:flex-row gap-3 w-full h-full items-center justify-center xl:gap-5">
           <Link
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <JavascriptIcon className="w-full max-w-[49px] h-auto"/>
+            <JavascriptIcon className="w-full max-w-[49px] h-auto" />
           </Link>
           <Link
             href="https://www.typescriptlang.org"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <TypescriptIcon className="w-full max-w-[51px] h-auto"/>
+            <TypescriptIcon className="w-full max-w-[51px] h-auto" />
           </Link>
         </div>
       </div>
       <div className="flex row-start-4 border-b border-x border-(--color-line)/50 items-center justify-center">
         <Link href="https://www.php.net/">
-          <PHPIcon className="w-full max-w-[86px] h-auto"/>
+          <PHPIcon className="w-full max-w-[86px] h-auto" />
         </Link>
       </div>
       <div className="flex row-start-4 border-b border-l border-(--color-line)/50 items-center justify-center">
@@ -185,26 +189,26 @@ export default function TechStack() {
           rel="noreferrer noopenner"
           target="_blank"
         >
-          <VercelIcon className="w-[90px] max-w-[150px] h-auto"/>
+          <VercelIcon className="w-[90px] max-w-[150px] h-auto" />
         </Link>
       </div>
       <div className="row-start-5 border-r border-(--color-line)/50"></div>
       <div className="row-start-5 border-x border-(--color-line)/50"></div>
       <div className="row-start-5 border-l border-(--color-line)/50">
-        <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center gap-5">
+        <div className="flex flex-col sm:flex-row w-full h-full items-center justify-center gap-5">
           <Link
             href="https://github.com"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <GithubIcon className="w-full max-w-[49px] h-auto"/>
+            <GithubIcon className="w-full max-w-[49px] h-auto" />
           </Link>
           <Link
             href="https://git-scm.com/"
             rel="noreferrer noopenner"
             target="_blank"
           >
-            <GitIcon className="w-full max-w-[43px] h-auto"/>
+            <GitIcon className="w-full max-w-[43px] h-auto" />
           </Link>
         </div>
       </div>

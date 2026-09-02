@@ -63,7 +63,7 @@ export default function MyWorkItem({image, title, description, techStack, github
           <div className="flex w-full h-fit gap-4 items-center justify-center xl:justify-end">
             {tagItems.map((item, id) => (
               <div
-                className={`${tagColors[id]} flex w-fit h-full rounded-lg text-[0.8rem] font-mono px-3 py-1 tracking-tight`}
+                className={`${tagColors[id]} flex w-fit h-full text-center items-center justify-center rounded-lg text-[0.65rem] sm:text-[0.75rem] md:text-[0.8rem] lg:text-[0.85rem] xl:text-[0.9rem] font-mono px-3 py-1 tracking-tight line-clamp-1`}
                 key={id}
               >
                 {item}
