@@ -14,9 +14,15 @@ interface MyWorkItemProps {
     githubButtonLink: string,
     isDemoButtonDisabled: boolean
     demoButtonLink?: string
+    tag1: string
+    tag2: string
+    tag3: string
+    tag4?: string
 }
 
-export default function MyWorkItem({image, title, description, techStack, githubButtonLink, isDemoButtonDisabled = true, demoButtonLink}: MyWorkItemProps) {
+export default function MyWorkItem({image, title, description, techStack, githubButtonLink, isDemoButtonDisabled = true, demoButtonLink, tag1, tag2, tag3, tag4}: MyWorkItemProps) {
+
+  const tagItems = [tag1, tag2, tag3, tag4];
   return (
     <div className="grid grid-cols-1 grid-rows-1 xl:grid-cols-[1fr_1fr] w-full border-t border-(--color-line) mt-15">
       {/* left side */}
@@ -49,6 +55,15 @@ export default function MyWorkItem({image, title, description, techStack, github
         </div>
 
         <div className="flex flex-col w-full h-full">
+          <div className="flex w-full h-[3%] gap-2">
+            {
+              tagItems.map((item, id) => (
+                <div className="flex w-fit h-full bg-(--color-blue) text-[0.9rem]" key={id}>
+                  {item}
+                </div>
+              ))
+            }
+          </div>
           <div className="flex w-full border-y h-4 border-(--color-line)" />
           <div className="flex items-center justify-center flex-col gap-2 xl:gap-4 md:flex-row w-full h-fit py-2">
             <Button

@@ -88,6 +88,9 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               isDemoButtonDisabled={false}
               demoButtonLink={"https://money-tracker-ct9a.onrender.com/"}
               githubButtonLink="https://github.com/danskyvich/money-tracker"
+              tag1="Fullstack"
+              tag2="UI/UX"
+              tag3="Render"
             />
 
             <p className="hidden md:block absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
