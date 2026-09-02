@@ -26,7 +26,7 @@ export default function MyWorkItem({image, title, description, techStack, github
   const tagColors = [
     "bg-linear-90 from-(--color-brand-blue-soft)/70 to-(--color-brand-blue)", 
     "bg-linear-90 from-(--color-brand-purple-dark)/70 to-(--color-brand-purple)", 
-    "bg-linear-90 from-(--color-brand-yellow)/70 to-amber-500/90", 
+    "bg-linear-90 from-(--color-brand-yellow)/70 to-amber-500/70", 
     "bg-linear-90 from-(--color-brand-blue-soft)/70 to-(--color-brand-cyan)"
   ];
   return (
