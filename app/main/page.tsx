@@ -16,7 +16,6 @@ import {
   VSCodeIcon,
 } from "@/lib/icons";
 import { Commit } from "@/features/name-header/types/user";
-import Image from "next/image";
 import Footer from "@/components/layout/footer";
 import Browser from "@/features/about-me/components/browser";
 import MyWorkItem from "@/features/my-works/components/my-work-item";
@@ -86,7 +85,8 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               description="A web application that monitors your monthly finances by recording your transactions and analyzing inflows and outflows"
               image="/first-project.png"
               techStack={firstProjectIcons}
-              isDemoButtonDisabled={true}
+              isDemoButtonDisabled={false}
+              demoButtonLink={"https://money-tracker-ct9a.onrender.com/"}
               githubButtonLink="https://github.com/danskyvich/money-tracker"
             />
 
