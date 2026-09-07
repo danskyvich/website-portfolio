@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import ButtonSlantedBg from "../ui/button-slanted-bg";
-import { File } from "lucide-react";
-import Link from "next/link";
+import { FigmaIcon } from "@/lib/icons";
+import { redirect } from "next/navigation";
 
 export default function TopBar() {
 
@@ -31,8 +31,15 @@ export default function TopBar() {
 
         {/* Right side */}
         <div className="flex w-full h-full items-center justify-end gap-3 xl:gap-5 2xl:gap-10">
-
-          <ButtonSlantedBg text="Resume" link="/danilo-pelin-resume.pdf"/>
+          <a
+            className="flex w-fit h-full items-center justify-center gap-3 bg-linear-0 from-(--color-brand-blue) to-(--color-brand-blue-accent) text-[0.85rem] px-4 py-1.5 cursor-pointer rounded-sm duration-100 transition-all"
+            href="https://www.figma.com/design/ijPZLFAhQYlGP540IzqnOa/Web-Portfolio?node-id=0-1&t=UbPSXlObH6nZubvw-1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FigmaIcon className="h-6.5 w-auto rounded-sm"/>
+          </a>
+          <ButtonSlantedBg text="Resume" link="/danilo-pelin-resume.pdf" />
         </div>
       </div>
     );
