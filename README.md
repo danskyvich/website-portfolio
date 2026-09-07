@@ -1,6 +1,6 @@
 # Website Portfolio
 
-My web portfolio, showcasing my completed projects and a short section about me. I work on this project within three (3) weeks.
+My web portfolio showcases my completed projects along with a brief introduction about me. I developed the portfolio over a three-week period.
 
 <img width="1919" height="903" alt="portfolio-banner" src="https://github.com/user-attachments/assets/223ccfae-a63f-4b77-af7c-fe903f0beacd" />
 
