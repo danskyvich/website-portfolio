@@ -1,4 +1,3 @@
-<img width="32" height="32" alt="icon" src="https://github.com/user-attachments/assets/56eca1e0-06a8-4cb7-b8c6-55a0dcd6417d" />
 # Website Portfolio
 
 My web portfolio, showcasing my completed projects and a short section about me. I work on this project within three (3) weeks.
