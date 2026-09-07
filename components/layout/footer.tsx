@@ -35,7 +35,7 @@ export default function Footer() {
     <div className="flex relative w-full h-80 justify-end mt-6 gap-x-5">
       <div className="grid grid-cols-[35%_1fr_1fr] grid-rows-1 w-full h-full">
         <div className="flex flex-col border-r border-(--color-line)/50 mr-1 sm:mr-3 md:mr-5 px-2 py-10 gap-6">
-          <p className="text-[0.9rem] font-semibold">
+          <p className="text-[0.9rem] font-semibold line-clamp-1 truncate">
             Danilo Pelin Jr.
           </p>
           {personal.map((item, key) => (
@@ -44,14 +44,14 @@ export default function Footer() {
               key={key}
             >
               <div className="hidden md:block">{item.icon}</div>
-              <p className="flex text-[0.9rem] break-all">
+              <p className="flex text-[0.7rem] sm:text-[0.9rem] break-all">
                 {item.name}
               </p>
             </div>
           ))}
         </div>
         <div className="flex flex-col gap-6 border-x border-(--color-line)/50 px-2 pt-10 text-[0.7rem] md:text-[0.85rem] lg:text-[0.9rem]">
-          <p className="font-bold text-[0.9rem]">
+          <p className="font-semibold text-[0.9rem] line-clamp-1 truncate">
             This page
           </p>
           {links.map((item, key) => (
@@ -60,7 +60,9 @@ export default function Footer() {
               className="font-light hover:underline cursor-pointer line-clamp-1 whitespace-nowrap text-[0.9rem]"
               key={key}
             >
-              {item.name}
+              <p className="flex text-[0.7rem] sm:text-[0.9rem] break-all">
+                {item.name}
+              </p>
             </a>
           ))}
         </div>
@@ -77,7 +79,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <p className="line-clamp-1 whitespace-nowrap text-[0.9rem]">
+                <p className="flex text-[0.7rem] sm:text-[0.9rem] break-all">
                   {item.name}
                 </p>
               </a>
