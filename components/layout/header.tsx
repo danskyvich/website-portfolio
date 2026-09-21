@@ -30,7 +30,7 @@ export default function TopBar() {
         </div>
 
         {/* Right side */}
-        <div className="flex w-full h-full items-center justify-end gap-3 xl:gap-5 2xl:gap-10">
+        <div className="flex w-full h-full items-center justify-end gap-3">
           <a
             className="flex w-fit h-full items-center justify-center gap-3 bg-linear-0 from-(--color-brand-blue) to-(--color-brand-blue-accent) text-[0.85rem] px-4 py-1.5 cursor-pointer rounded-sm duration-100 transition-all"
             href="https://www.figma.com/design/ijPZLFAhQYlGP540IzqnOa/Web-Portfolio?node-id=0-1&t=UbPSXlObH6nZubvw-1"

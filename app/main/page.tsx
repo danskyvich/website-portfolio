@@ -4,57 +4,14 @@ import SectionHeader from "@/components/ui/section-header";
 import TechStack from "@/features/about-me/components/tech-stack";
 import DoubleLineBorder from "@/components/ui/double-line-border";
 import PortfolioHeader from "@/features/name-header/components/portfolio-header";
-import {
-  CSSIcon,
-  GithubIcon,
-  HTMLWeb3Icon,
-  NextJSIcon,
-  SupabaseIcon,
-  TailwindCSSIcon,
-  TypescriptIcon,
-  VercelIcon,
-  VSCodeIcon,
-} from "@/lib/icons";
+
 import { Commit } from "@/features/name-header/types/user";
 import Footer from "@/components/layout/footer";
 import Browser from "@/features/about-me/components/browser";
-import MyWorkItem from "@/features/my-works/components/my-work-item";
 import ContactMeForm from "@/features/contact-me/components/contact-me-form";
-
-const firstProjectIcons = [
-  {
-    icon: <TypescriptIcon className="w-full max-w-[51px] h-auto" />,
-    link: "https://www.typescriptlang.org",
-  },
-  {
-    icon: <TailwindCSSIcon className="w-full max-w-[136px] h-auto" />,
-    link: "https://www.tailwindcss.com",
-  },
-  {
-    icon: <SupabaseIcon className="w-full max-w-[122px] h-auto" />,
-    link: "https://www.supabase.com",
-  },
-  {
-    icon: <HTMLWeb3Icon className="w-[40px] max-w-[115px] h-auto" />,
-    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-  },
-  {
-    icon: <CSSIcon className="w-full max-w-[51px] h-auto" />,
-    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  },
-  {
-    icon: <NextJSIcon className="w-full max-w-[107px] h-auto" />,
-    link: "https://www.nextjs.org",
-  },
-  {
-    icon: <VercelIcon className="w-full max-w-[113px] h-auto" />,
-    link: "https://www.vercel.com",
-  },
-  {
-    icon: <VSCodeIcon className="w-full max-w-[48px] h-auto" />,
-    link: "https://code.visualstudio.com",
-  },
-];
+import MyWorkItemLeft from "@/features/my-works/components/my-work-item-left";
+import MyWorkItemRight from "@/features/my-works/components/my-work-item-right";
+import { firstProjectIcons, secondProjectIcons } from "@/features/my-works/assets/work-icons";
 
 export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
   return (
@@ -80,9 +37,9 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               id="my-works"
             />
 
-            <MyWorkItem
+            <MyWorkItemLeft
               title="Money Tracker"
-              description="A web application that monitors your monthly finances by recording your transactions and analyzing inflows and outflows"
+              description="A web application that monitors your finances by recording your transactions"
               image="/first-project.png"
               techStack={firstProjectIcons}
               isDemoButtonDisabled={false}
@@ -92,6 +49,19 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               tag2="UI/UX"
               tag3="Web application"
               tag4="PostgrestSQL"
+            />
+
+            <MyWorkItemRight
+              title="Fire Tracker"
+              description="A web application that monitors possible fire/thermal hotspots around the world."
+              image="/fire-tracker.png"
+              techStack={secondProjectIcons}
+              isDemoButtonDisabled={true}
+              githubButtonLink="https://github.com/danskyvich/fire-tracker"
+              tag1="Fullstack"
+              tag2="ASP.NET"
+              tag3="Redis"
+              tag4="Supabase"
             />
 
             <p className="hidden md:block absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">

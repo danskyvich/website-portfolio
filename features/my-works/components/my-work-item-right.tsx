@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { ProjectInformation } from "../types/types";
 
-interface MyWorkItemProps {
+interface MyWorkItemRightProps {
     image: string,
     title: string,
     description: string,
@@ -20,7 +20,7 @@ interface MyWorkItemProps {
     tag4: string
 }
 
-export default function MyWorkItem({image, title, description, techStack, githubButtonLink, isDemoButtonDisabled = true, demoButtonLink, tag1, tag2, tag3, tag4}: MyWorkItemProps) {
+export default function MyWorkItemRight({image, title, description, techStack, githubButtonLink, isDemoButtonDisabled = true, demoButtonLink, tag1, tag2, tag3, tag4}: MyWorkItemRightProps) {
 
   const tagItems = [tag1, tag2, tag3, tag4];
   const tagColors = [
@@ -31,21 +31,8 @@ export default function MyWorkItem({image, title, description, techStack, github
   ];
   return (
     <div className="grid grid-cols-1 grid-rows-1 xl:grid-cols-[1fr_1fr] w-full border-t border-(--color-line) mt-15">
-      {/* left side */}
-      <div className="flex w-full h-fit justify-center">
-        <div className="bg-(--color-brand-blue-dark) w-full h-fit p-2">
-          <Image
-            src={image}
-            alt="alt"
-            width={900}
-            height={130}
-            className="rounded-[10%] h-full"
-          />
-        </div>
-      </div>
-
-      {/* Right side */}
-      <div className="flex flex-col w-full border-l border-(--color-line) h-full text-end">
+      {/* Left side */}
+      <div className="flex flex-col order-2 xl:order-1 w-full border-l border-(--color-line) h-full text-end">
         <div className="flex flex-col w-full">
           {/* Title */}
           <p className="w-full font-bold py-3 xl:py-0 text-center xl:text-end font-mono text-xl md:text-2xl xl:text-3xl pr-3 border-b border-(--color-line)/30">
@@ -98,6 +85,18 @@ export default function MyWorkItem({image, title, description, techStack, github
       <p className="hidden md:block absolute bottom-10 -left-13 rotate-270 [writing-style:lr] text-(--color-brand-purple) font-mono">
         my works
       </p>
+
+      {/* Right side */}
+      <div className="flex bg-(--color-brand-blue-dark) p-2 xl:order-2 order-1 h-fit w-full justify-center">
+        <div className="w-full h-103 relative">
+          <Image
+            src={image}
+            alt="alt"
+            fill
+            className="rounded-[10%] object-cover"
+          />
+        </div>
+      </div>
     </div>
   );
 }
