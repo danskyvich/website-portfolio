@@ -56,7 +56,8 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               description="A web application that monitors possible fire/thermal hotspots around the world."
               image="/fire-tracker.png"
               techStack={secondProjectIcons}
-              isDemoButtonDisabled={true}
+              isDemoButtonDisabled={false}
+              demoButtonLink="https://fire-tracker-dpjrs.vercel.app/"
               githubButtonLink="https://github.com/danskyvich/fire-tracker"
               tag1="Fullstack"
               tag2="ASP.NET"

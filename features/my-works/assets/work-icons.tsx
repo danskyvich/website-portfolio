@@ -5,6 +5,7 @@ import {
   NETIcon,
   NextJSIcon,
   RedisIcon,
+  Render,
   SupabaseIcon,
   TailwindCSSIcon,
   TypescriptIcon,

@@ -18,9 +18,10 @@ interface MyWorkItemRightProps {
     tag2: string
     tag3: string
     tag4: string
+    className?: string
 }
 
-export default function MyWorkItemRight({image, title, description, techStack, githubButtonLink, isDemoButtonDisabled = true, demoButtonLink, tag1, tag2, tag3, tag4}: MyWorkItemRightProps) {
+export default function MyWorkItemRight({className, image, title, description, techStack, githubButtonLink, isDemoButtonDisabled = true, demoButtonLink, tag1, tag2, tag3, tag4}: MyWorkItemRightProps) {
 
   const tagItems = [tag1, tag2, tag3, tag4];
   const tagColors = [
@@ -30,24 +31,24 @@ export default function MyWorkItemRight({image, title, description, techStack, g
     "bg-linear-90 from-(--color-brand-blue-soft)/70 to-(--color-brand-cyan)"
   ];
   return (
-    <div className="grid grid-cols-1 grid-rows-1 xl:grid-cols-[1fr_1fr] w-full border-t border-(--color-line) mt-15">
+    <div className={`${className} grid grid-cols-1 grid-rows-1 xl:grid-cols-[1fr_1fr] w-full border-t border-(--color-line) mt-35`}>
       {/* Left side */}
       <div className="flex flex-col order-2 xl:order-1 w-full border-l border-(--color-line) h-full text-end">
         <div className="flex flex-col w-full">
           {/* Title */}
-          <p className="w-full font-bold py-3 xl:py-0 text-center xl:text-end font-mono text-xl md:text-2xl xl:text-3xl pr-3 border-b border-(--color-line)/30">
+          <p className="w-full font-bold py-3 xl:py-0 text-center xl:text-start font-mono text-xl md:text-2xl xl:text-3xl pr-3 border-b border-(--color-line)/30">
             {title}
           </p>
 
           {/* Subtitle */}
           <div className="flex w-full h-fit">
-            <p className="flex h-fit text-center xl:text-end px-[5%] py-5 xl:px-[30%_5] text-white/50 text-[0.9rem]/6 xl:py-1 line-clamp-3 border-b border-(--color-line)/50 ">
+            <p className="flex h-fit items-center md:justify-center w-full text-center xl:text-start px-[5%] py-5 xl:px-[5_30%] text-white/50 text-[0.9rem]/6 xl:py-1 line-clamp-3 border-b border-(--color-line)/50 ">
               {description}
             </p>
           </div>
 
           {/* Tags */}
-          <div className="flex w-full h-fit gap-4 items-center justify-center xl:justify-end">
+          <div className="flex w-full h-fit gap-4 items-center justify-center xl:justify-start">
             {tagItems.map((item, id) => (
               <div
                 className={`${tagColors[id]} flex w-fit h-full text-center items-center justify-center rounded-lg text-[0.65rem] sm:text-[0.75rem] md:text-[0.8rem] lg:text-[0.85rem] xl:text-[0.9rem] font-mono px-3 py-1 tracking-tight line-clamp-1`}

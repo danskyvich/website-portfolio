@@ -53,7 +53,7 @@ export default function MyWorkItemLeft({image, title, description, techStack, gi
 
           {/* Subtitle */}
           <div className="flex w-full h-fit">
-            <p className="flex h-fit text-center xl:text-end px-[5%] py-5 xl:px-[30%_5] text-white/50 text-[0.9rem]/6 xl:py-1 line-clamp-3 border-b border-(--color-line)/50 ">
+            <p className="flex h-fit w-full items-center justify-center text-center xl:text-end px-[5%] py-5 xl:px-[30%_5] text-white/50 text-[0.9rem]/6 xl:py-1 line-clamp-3 border-b border-(--color-line)/50 ">
               {description}
             </p>
           </div>
