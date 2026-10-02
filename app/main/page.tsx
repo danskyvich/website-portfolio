@@ -43,7 +43,7 @@ export default function MainPortfolioPage({commits}: {commits: Commit | null}) {
               image="/first-project.png"
               techStack={firstProjectIcons}
               isDemoButtonDisabled={false}
-              demoButtonLink={"https://money-tracker-ct9a.onrender.com/"}
+              demoButtonLink={"https://money-tracker-dpjrs.vercel.app/"}
               githubButtonLink="https://github.com/danskyvich/money-tracker"
               tag1="Fullstack"
               tag2="UI/UX"
